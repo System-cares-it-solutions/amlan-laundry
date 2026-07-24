@@ -16,17 +16,18 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Force navbar text and hamburger to be black on this page since there is no dark hero background */
-    .header .nav-link {
-      color: #000 !important;
-    }
-    .header .hamburger span {
-      background-color: #000 !important;
-    }
-    /* Add a subtle background and shadow to header so it stands out */
-    .header {
-      background: rgba(255, 255, 255, 0.95) !important;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+    /* Desktop header styling for Our Story page */
+    @media (min-width: 901px) {
+      .header .nav-link {
+        color: #000 !important;
+      }
+      .header .hamburger span {
+        background-color: #000 !important;
+      }
+      .header {
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+      }
     }
   </style>
 </head>
