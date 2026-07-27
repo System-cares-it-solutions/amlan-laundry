@@ -355,10 +355,12 @@
     if (!items.length) return;
 
     items.forEach(item => {
-      item.addEventListener('mouseenter', () => {
+      function activateItem() {
         items.forEach(i => i.classList.remove('active'));
         item.classList.add('active');
-      });
+      }
+      item.addEventListener('mouseenter', activateItem);
+      item.addEventListener('click', activateItem);
     });
   }
 
