@@ -113,7 +113,7 @@
     });
 
     function startAutoplay() {
-      autoplayTimer = setInterval(nextSlide, 5000);
+      autoplayTimer = setInterval(nextSlide, 20000);
     }
 
     function resetAutoplay() {
@@ -334,7 +334,7 @@
         frame1Slides[idx1].classList.remove('active');
         idx1 = (idx1 + 1) % frame1Slides.length;
         frame1Slides[idx1].classList.add('active');
-      }, 3000);
+      }, 20000);
     }
 
     if (frame2Slides.length) {
@@ -343,7 +343,7 @@
         frame2Slides[idx2].classList.remove('active');
         idx2 = (idx2 + 1) % frame2Slides.length;
         frame2Slides[idx2].classList.add('active');
-      }, 3000);
+      }, 20000);
     }
   }
 
