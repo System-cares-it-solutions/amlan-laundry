@@ -2843,6 +2843,7 @@ button {
 
 /* --- MOBILE & TABLET PORTRAIT (max-width: 900px) --- */
 @media screen and (max-width: 900px) {
+
   /* Top Bar Adaptation */
   .top-header-bar {
     font-size: 11px;
@@ -3614,7 +3615,8 @@ button {
 }
 
 /* Ensure no unwanted horizontal overflow */
-body, html {
+body,
+html {
   max-width: 100vw;
   overflow-x: hidden !important;
 }
