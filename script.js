@@ -393,6 +393,44 @@
     });
   }
 
+  // =============================================
+  // 13. JOIN US NAV DROPDOWN LOGIC
+  // =============================================
+  function initJoinUsDropdown() {
+    const dropdown = document.getElementById('joinUsDropdown');
+    const toggleBtn = document.getElementById('joinUsBtn');
+    const items = document.querySelectorAll('#joinUsMenu .dropdown-item');
+
+    if (!dropdown || !toggleBtn) return;
+
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('open');
+      dropdown.classList.toggle('open', !isOpen);
+      toggleBtn.setAttribute('aria-expanded', !isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        dropdown.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+
+        const programName = item.getAttribute('data-program');
+        const messageInput = document.querySelector('#contact textarea, input[name="notes"]');
+        if (messageInput && programName) {
+          messageInput.value = `Enquiry regarding: ${programName}`;
+        }
+      });
+    });
+  }
+
   // Initialize all functions on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     initAOS();
@@ -405,6 +443,7 @@
     initAboutFrameSliders();
     initExpandHoverList();
     initTechTabs();
+    initJoinUsDropdown();
   });
 
 })();
