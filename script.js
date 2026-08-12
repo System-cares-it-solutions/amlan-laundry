@@ -547,22 +547,30 @@
     });
   }
 
+  // =============================================
+  // 17. PROGRAM NAVIGATION HANDLERS (FALLBACK)
+  // =============================================
+  function initNavProgramHandlers() {
+    // Helper for program navigation links
+  }
+
   // Initialize all functions on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
-    initAOS();
-    initHeroSlider();
-    initHeader();
-    initMobileMenu();
-    initCounters();
-    initCategoryFilter();
-    initBookingForm();
-    initAboutFrameSliders();
-    initExpandHoverList();
-    initTechTabs();
-    initJoinUsDropdown();
-    initNavProgramHandlers();
-    initStoreLocatorSearch();
-    initFAQAccordion();
+    if (typeof initAOS === 'function') initAOS();
+    if (typeof initHeroSlider === 'function') initHeroSlider();
+    if (typeof initHeader === 'function') initHeader();
+    if (typeof initMobileMenu === 'function') initMobileMenu();
+    if (typeof initCounters === 'function') initCounters();
+    if (typeof initCategoryFilter === 'function') initCategoryFilter();
+    if (typeof initBookingForm === 'function') initBookingForm();
+    if (typeof initAboutFrameSliders === 'function') initAboutFrameSliders();
+    if (typeof initExpandHoverList === 'function') initExpandHoverList();
+    if (typeof initTechTabs === 'function') initTechTabs();
+    if (typeof initJoinUsDropdown === 'function') initJoinUsDropdown();
+    if (typeof initNavProgramHandlers === 'function') initNavProgramHandlers();
+    if (typeof initStoreLocatorSearch === 'function') initStoreLocatorSearch();
+    if (typeof initFAQAccordion === 'function') initFAQAccordion();
   });
 
 })();
+

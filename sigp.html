@@ -19,6 +19,7 @@
     .header .nav-link:not(.nav-btn-pickup) {
       color: #0c2540 !important;
     }
+
     .header .nav-link:not(.nav-btn-pickup):hover,
     .header .nav-link:not(.nav-btn-pickup).active {
       color: #c62222 !important;
@@ -90,135 +91,208 @@
     </section>
 
     <!-- SECTION: WHO CAN JOIN? -->
-    <section class="sigp-join-section" style="padding: 70px 0; background: #ffffff;">
-      <div class="container">
+    <section class="sigp-join-section" style="padding: 60px 0 80px 0; background: #ffffff;">
+      <div class="container" style="max-width: 1140px; margin: 0 auto; padding: 0 20px;">
 
-        <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 50px;">
-          <div class="section-eyebrow"
-            style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
-            Inclusive Opportunity
-          </div>
-          <h2 class="section-title-center"
-            style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
-            Who Can <span class="highlight" style="color: #c62222;">Join?</span>
+        <!-- Section Title & Subtitle -->
+        <div data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
+          <h2
+            style="font-family: 'Oswald', sans-serif; font-size: clamp(34px, 4.5vw, 46px); font-weight: 700; color: #0c2540; margin: 0 0 12px 0; line-height: 1.2; text-transform: none;">
+            Who Can Join?
           </h2>
-          <p class="section-subtitle"
-            style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; max-width: 720px; margin: 0 auto 10px auto;">
-            No prior experience required — open to everyone ready to build an independent livelihood.
-          </p>
+          <div
+            style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #c62222; font-family: 'Poppins', sans-serif; font-size: clamp(18px, 2.5vw, 22px); font-weight: 700;">
+            <span style="font-size: 24px; line-height: 1;">&rarr;</span>
+            <span>No prior experience required</span>
+          </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <!-- Cards Layout -->
+        <div class="who-can-join-grid-wrapper">
 
-          <!-- Category 1 -->
-          <div data-aos="fade-up" data-aos-delay="100"
-            style="background: #f8fafc; border: 1px solid rgba(12, 37, 64, 0.08); border-top: 4px solid #c62222; border-radius: 14px; padding: 30px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 28px; margin-bottom: 12px;">🧺</div>
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 10px;">
-              Traditional Dhobi Families</h3>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.65; margin: 0; text-align: justify;">
-              Modernize your traditional skills with professional equipment. Build a sustainable business for your
-              family's future.
-            </p>
+          <!-- Top Row: 3 Cards -->
+          <div class="who-can-join-row-top"
+            style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 28px;">
+
+            <!-- Card 1: Traditional dhobi families -->
+            <div data-aos="fade-up" data-aos-delay="100" class="who-can-join-card"
+              style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+              <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
+                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/folding clothes.png'" alt="Traditional dhobi families"
+                  style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                <h3
+                  style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #0c2540; margin: 0 0 8px 0; line-height: 1.35;">
+                  Traditional dhobi families
+                </h3>
+                <p
+                  style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #64748b; line-height: 1.55; margin: 0;">
+                  Modernize your traditional skills with professional equipment. Build a sustainable business for your
+                  family's future.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Women / Homemakers -->
+            <div data-aos="fade-up" data-aos-delay="150" class="who-can-join-card"
+              style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+              <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
+                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/staffs.png'" alt="Women / Homemakers"
+                  style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                <h3
+                  style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #0c2540; margin: 0 0 8px 0; line-height: 1.35;">
+                  Women / Homemakers
+                </h3>
+                <p
+                  style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #64748b; line-height: 1.55; margin: 0;">
+                  Achieve financial independence. Flexible hours that fit your family responsibilities.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Differently-abled individuals -->
+            <div data-aos="fade-up" data-aos-delay="200" class="who-can-join-card"
+              style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+              <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
+                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/real_social_impact.png'" alt="Differently-abled individuals"
+                  style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                <h3
+                  style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #0c2540; margin: 0 0 8px 0; line-height: 1.35;">
+                  Differently-abled individuals
+                </h3>
+                <p
+                  style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #64748b; line-height: 1.55; margin: 0;">
+                  Equal opportunity for meaningful work. We provide specialized training and accessible equipment.
+                </p>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Category 2 -->
-          <div data-aos="fade-up" data-aos-delay="150"
-            style="background: #f8fafc; border: 1px solid rgba(12, 37, 64, 0.08); border-top: 4px solid #c62222; border-radius: 14px; padding: 30px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 28px; margin-bottom: 12px;">👩‍💼</div>
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 10px;">
-              Women / Homemakers</h3>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.65; margin: 0; text-align: justify;">
-              Achieve financial independence. Flexible hours that fit your family responsibilities.
-            </p>
-          </div>
+          <!-- Bottom Row: 2 Cards Centered -->
+          <div class="who-can-join-row-bottom"
+            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 760px; margin: 0 auto;">
 
-          <!-- Category 3 -->
-          <div data-aos="fade-up" data-aos-delay="200"
-            style="background: #f8fafc; border: 1px solid rgba(12, 37, 64, 0.08); border-top: 4px solid #c62222; border-radius: 14px; padding: 30px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 28px; margin-bottom: 12px;">♿</div>
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 10px;">
-              Differently-Abled Individuals</h3>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.65; margin: 0; text-align: justify;">
-              Equal opportunity for meaningful work. We provide specialized training and accessible equipment.
-            </p>
-          </div>
+            <!-- Card 4: Unemployed youth -->
+            <div data-aos="fade-up" data-aos-delay="250" class="who-can-join-card"
+              style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+              <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/shirts.png'" alt="Unemployed youth"
+                  style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                <h3
+                  style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #0c2540; margin: 0 0 8px 0; line-height: 1.35;">
+                  Unemployed youth
+                </h3>
+                <p
+                  style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #64748b; line-height: 1.55; margin: 0;">
+                  Start your entrepreneurial journey with complete support. Learn valuable skills and build your own
+                  business.
+                </p>
+              </div>
+            </div>
 
-          <!-- Category 4 -->
-          <div data-aos="fade-up" data-aos-delay="250"
-            style="background: #f8fafc; border: 1px solid rgba(12, 37, 64, 0.08); border-top: 4px solid #c62222; border-radius: 14px; padding: 30px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 28px; margin-bottom: 12px;">🎓</div>
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 10px;">
-              Unemployed Youth</h3>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.65; margin: 0; text-align: justify;">
-              Start your entrepreneurial journey with complete support. Learn valuable skills and build your own
-              business.
-            </p>
-          </div>
+            <!-- Card 5: Aspiring small business owners -->
+            <div data-aos="fade-up" data-aos-delay="300" class="who-can-join-card"
+              style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+              <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/booking.png'" alt="Aspiring small business owners"
+                  style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
+                <h3
+                  style="font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 700; color: #0c2540; margin: 0 0 8px 0; line-height: 1.35;">
+                  Aspiring small business owners
+                </h3>
+                <p
+                  style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #64748b; line-height: 1.55; margin: 0;">
+                  Low investment, high returns opportunity. Complete business setup with ongoing mentorship and support.
+                </p>
+              </div>
+            </div>
 
-          <!-- Category 5 -->
-          <div data-aos="fade-up" data-aos-delay="300"
-            style="background: #f8fafc; border: 1px solid rgba(12, 37, 64, 0.08); border-top: 4px solid #c62222; border-radius: 14px; padding: 30px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 600px;">
-            <div style="font-size: 28px; margin-bottom: 12px;">🏪</div>
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 10px;">
-              Aspiring Small Business Owners</h3>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.65; margin: 0; text-align: justify;">
-              Low investment, high returns opportunity. Complete business setup with ongoing mentorship and support.
-            </p>
           </div>
 
         </div>
+
       </div>
-    </section>
+      <!-- SECTION: ABOUT US (TRADITION MEETS INNOVATION) -->
+      <section class="sigp-about-section"
+        style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
+        <div class="container" style="max-width: 1180px; margin: 0 auto; padding: 0 20px;">
 
-    <!-- SECTION: ABOUT US (TRADITION MEETS INNOVATION) -->
-    <section class="sigp-about-section"
-      style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
-      <div class="container">
+          <!-- 2 Column Grid Layout: Content Left, Images Right -->
+          <div class="about-sigp-grid"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center;" data-aos="fade-up">
 
-        <div style="max-width: 860px; margin: 0 auto;" data-aos="fade-up">
-          <div class="section-eyebrow"
-            style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
-            About SIGP
+            <!-- Left Column: Content Text -->
+            <div>
+              <div class="section-eyebrow"
+                style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
+                About SIGP
+              </div>
+              <h2 class="section-title"
+                style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 3.5vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
+                Where <span class="highlight" style="color: #c62222;">Tradition</span> Meets <span class="highlight"
+                  style="color: #c62222;">Innovation</span>
+              </h2>
+              <div class="intro-divider" style="margin-bottom: 24px;">
+                <svg viewBox="0 0 200 20" class="divider-svg" style="width: 140px; height: 14px;">
+                  <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
+                </svg>
+              </div>
+              <p
+                style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 16px; text-align: justify;">
+                Sustainable livelihoods emerge when skill meets opportunity. This principle drives The Salavai Laundry,
+                a
+                transformative initiative dedicated to creating stable income pathways and foster economic independence.
+              </p>
+              <p
+                style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 16px; text-align: justify;">
+                We unite generations of mastery in fabric care with cutting-edge laundry technology to meet the rising
+                demand for organized, professional laundry service in India (Tamil Nadu). Our mission is to help
+                individuals
+                and families establish scalable, dependable businesses that stand the test of time.
+              </p>
+              <p
+                style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; line-height: 1.75; margin: 0; text-align: justify;">
+                We serve a diverse community: traditional dhobis ready to modernize their craft, homemakers seeking
+                financial independence, differently-abled individuals and ambitious entrepreneurs looking to enter the
+                laundry industry. Through access to capital, training, and mentorship, we provide the tools and support
+                required to build a successful laundry business.
+              </p>
+            </div>
+
+            <!-- Right Column: Overlapping Circular Images Design -->
+            <div class="sigp-circles-wrapper">
+              <!-- Top Circle: Community & People -->
+              <div class="sigp-circle-item sigp-circle-top">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/our_story_mission.png'" alt="Tamil Nadu Community & Homemakers" />
+              </div>
+
+              <!-- Bottom Circle: South Indian Tamil Nadu Temple & Heritage -->
+              <div class="sigp-circle-item sigp-circle-bottom">
+                <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=800&q=80"
+                  onerror="this.src='images/iron.png'" alt="Traditional Heritage & Culture" />
+              </div>
+
+              <!-- Connection Node -->
+              <div class="sigp-circle-connector"></div>
+            </div>
+
           </div>
-          <h2 class="section-title"
-            style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
-            Where <span class="highlight" style="color: #c62222;">Tradition</span> Meets <span class="highlight"
-              style="color: #c62222;">Innovation</span>
-          </h2>
-          <div class="intro-divider" style="margin-bottom: 24px;">
-            <svg viewBox="0 0 200 20" class="divider-svg" style="width: 140px; height: 14px;">
-              <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
-            </svg>
-          </div>
-          <p
-            style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; line-height: 1.75; margin-bottom: 18px; text-align: justify;">
-            Sustainable livelihoods emerge when skill meets opportunity. This principle drives The Salavai Laundry, a
-            transformative initiative dedicated to creating stable income pathways and foster economic independence.
-          </p>
-          <p
-            style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; line-height: 1.75; margin-bottom: 18px; text-align: justify;">
-            We unite generations of mastery in fabric care with cutting-edge laundry technology to meet the rising
-            demand for organized, professional laundry service in India (Tamil Nadu). Our mission is to help individuals
-            and families establish scalable, dependable businesses that stand the test of time.
-          </p>
-          <p
-            style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; line-height: 1.75; margin: 0; text-align: justify;">
-            We serve a diverse community: traditional dhobis ready to modernize their craft, homemakers seeking
-            financial independence, differently-abled individuals and ambitious entrepreneurs looking to enter the
-            laundry industry. Through access to capital, training, and mentorship, we provide the tools and support
-            required to build a successful laundry business.
-          </p>
         </div>
 
         <!-- OUR VISION SUB-BOX -->
@@ -278,368 +352,456 @@
           </div>
         </div>
 
-      </div>
-    </section>
+  </div>
+  </section>
 
-    <!-- SECTION: WHAT WE PROVIDE & WHY THE SALAVAI LAUNDRY -->
-    <section class="sigp-provide-section" style="padding: 70px 0; background: #ffffff;">
-      <div class="container">
+  <!-- SECTION: WHAT WE PROVIDE & WHY THE SALAVAI LAUNDRY -->
+  <section class="sigp-provide-section" style="padding: 70px 0; background: #ffffff;">
+    <div class="container">
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
 
-          <!-- What We Provide -->
-          <div data-aos="fade-right"
-            style="background: #f8fafc; border-radius: 16px; border: 1px solid rgba(12, 37, 64, 0.08); padding: 36px 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: #0c2540; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-              <span style="color: #c62222;">✦</span> What We Provide
-            </h3>
+        <!-- What We Provide -->
+        <div data-aos="fade-right"
+          style="background: #f8fafc; border-radius: 16px; border: 1px solid rgba(12, 37, 64, 0.08); padding: 36px 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+          <h3
+            style="font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: #0c2540; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #c62222;">✦</span> What We Provide
+          </h3>
 
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Complete business setup</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Store design</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Branding Name</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Laundry Equipment</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Complete training &amp; Skilled
-                  Staff</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Marketing support</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Digital Marketing</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">✓</span> <span>Ongoing guidance</span>
-              </li>
-            </ul>
-          </div>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Complete business setup</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Store design</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Branding Name</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Laundry Equipment</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Complete training &amp; Skilled
+                Staff</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Marketing support</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Digital Marketing</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">✓</span> <span>Ongoing guidance</span>
+            </li>
+          </ul>
+        </div>
 
-          <!-- Why The Salavai Laundry? -->
-          <div data-aos="fade-left"
-            style="background: #f8fafc; border-radius: 16px; border: 1px solid rgba(12, 37, 64, 0.08); padding: 36px 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
-            <h3
-              style="font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: #0c2540; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-              <span style="color: #c62222;">✦</span> Why The Salavai Laundry?
-            </h3>
+        <!-- Why The Salavai Laundry? -->
+        <div data-aos="fade-left"
+          style="background: #f8fafc; border-radius: 16px; border: 1px solid rgba(12, 37, 64, 0.08); padding: 36px 30px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+          <h3
+            style="font-family: 'Oswald', sans-serif; font-size: 26px; font-weight: 700; color: #0c2540; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #c62222;">✦</span> Why The Salavai Laundry?
+          </h3>
 
-            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">★</span> <span>Social welfare-focused initiative</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">★</span> <span>Low investment</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">★</span> <span>Complete support</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">★</span> <span>Modern machinery</span>
-              </li>
-              <li
-                style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
-                <span style="color: #c62222; font-weight: 700;">★</span> <span>Good income opportunity</span>
-              </li>
-            </ul>
-          </div>
-
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px;">
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">★</span> <span>Social welfare-focused initiative</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">★</span> <span>Low investment</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">★</span> <span>Complete support</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">★</span> <span>Modern machinery</span>
+            </li>
+            <li
+              style="display: flex; align-items: flex-start; gap: 12px; font-family: 'Poppins', sans-serif; font-size: 15px; color: #334155;">
+              <span style="color: #c62222; font-weight: 700;">★</span> <span>Good income opportunity</span>
+            </li>
+          </ul>
         </div>
 
       </div>
-    </section>
 
-    <!-- SECTION: TRAINING & SKILL DEVELOPMENT -->
-    <section class="sigp-training-section"
-      style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
-      <div class="container">
+    </div>
+  </section>
 
-        <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
-          <div class="section-eyebrow"
-            style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
-            Skills Mastery
+  <!-- SECTION: TRAINING & SKILL DEVELOPMENT -->
+  <section class="sigp-training-section"
+    style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
+    <div class="container">
+
+      <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
+        <div class="section-eyebrow"
+          style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
+          Skills Mastery
+        </div>
+        <h2 class="section-title-center"
+          style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
+          Training &amp; <span class="highlight" style="color: #c62222;">Skill Development</span>
+        </h2>
+        <p class="section-subtitle"
+          style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; max-width: 780px; margin: 0 auto; line-height: 1.65;">
+          We provide hands-on training programs designed to ensure mastery across all aspects of commercial laundry
+          operations.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+        <!-- Card 1 -->
+        <div data-aos="fade-up" data-aos-delay="100"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
           </div>
-          <h2 class="section-title-center"
-            style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
-            Training &amp; <span class="highlight" style="color: #c62222;">Skill Development</span>
-          </h2>
-          <p class="section-subtitle"
-            style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; max-width: 780px; margin: 0 auto; line-height: 1.65;">
-            We provide hands-on training programs designed to ensure mastery across all aspects of commercial laundry
-            operations.
-          </p>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            Operation, troubleshooting, routine maintenance of commercial laundry equipment.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-
-          <div data-aos="fade-up" data-aos-delay="100"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">⚙️</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              Operation, troubleshooting, routine maintenance of commercial laundry equipment.</p>
+        <!-- Card 2 -->
+        <div data-aos="fade-up" data-aos-delay="150"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
           </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            Advanced fabric handling techniques and professional stain removal methods.</p>
+        </div>
 
-          <div data-aos="fade-up" data-aos-delay="150"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">✨</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              Advanced fabric handling techniques and professional stain removal methods.</p>
+        <!-- Card 3 -->
+        <div data-aos="fade-up" data-aos-delay="200"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
           </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            End-to-end workflow management for efficient daily operations.</p>
+        </div>
 
-          <div data-aos="fade-up" data-aos-delay="200"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">📈</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              End-to-end workflow management for efficient daily operations.</p>
+        <!-- Card 4 -->
+        <div data-aos="fade-up" data-aos-delay="250"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
           </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            Hygiene protocols, safety compliance, and quality assurance frameworks.</p>
+        </div>
 
-          <div data-aos="fade-up" data-aos-delay="250"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">🛡️</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              Hygiene protocols, safety compliance, and quality assurance frameworks.</p>
+        <!-- Card 5 -->
+        <div data-aos="fade-up" data-aos-delay="300"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="8.5" cy="7" r="4"/>
+              <polyline points="17 11 19 13 23 9"/>
+            </svg>
           </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            Customer service excellence, strategic pricing models, and business sustainability practices.</p>
+        </div>
 
-          <div data-aos="fade-up" data-aos-delay="300"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">🤝</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              Customer service excellence, strategic pricing models, and business sustainability practices.</p>
+        <!-- Card 6 -->
+        <div data-aos="fade-up" data-aos-delay="350"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M9 21v-2a4 4 0 0 0-4-4H3a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
           </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            How to handle customers and build relationships.</p>
+        </div>
 
-          <div data-aos="fade-up" data-aos-delay="350"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">👥</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              How to handle customers and build relationships.</p>
+        <!-- Card 7 -->
+        <div data-aos="fade-up" data-aos-delay="400"
+          style="background: #ffffff; border-radius: 14px; padding: 28px 22px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid rgba(12,37,64,0.06); transition: transform 0.3s ease; grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 520px;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: rgba(198, 34, 34, 0.08); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v12M15 9.5a2.5 2.5 0 0 0-5 0c0 4 5 2 5 6a2.5 2.5 0 0 1-5 0"/>
+            </svg>
           </div>
-
-          <div data-aos="fade-up" data-aos-delay="400"
-            style="background: #ffffff; border-radius: 12px; padding: 26px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03); grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 520px;">
-            <div style="font-size: 24px; color: #c62222; margin-bottom: 10px;">💡</div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
-              Pricing strategies and profit optimization methods.</p>
-          </div>
-
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+            Pricing strategies and profit optimization methods.</p>
         </div>
 
       </div>
-    </section>
 
-    <!-- SECTION: CSR & GOVERNMENT SUPPORT -->
-    <section class="sigp-csr-section" style="padding: 70px 0; background: #ffffff;">
-      <div class="container">
+    </div>
+  </section>
 
-        <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
+  <!-- SECTION: CSR & GOVERNMENT SUPPORT -->
+  <section class="sigp-csr-section" style="padding: 70px 0; background: #ffffff;">
+    <div class="container" style="max-width: 1180px; margin: 0 auto; padding: 0 20px;">
+
+      <!-- 2-Column Grid Layout: Text Left, Partner Box Right -->
+      <div class="csr-grid-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 45px; align-items: center;" data-aos="fade-up">
+
+        <!-- Left Column: Strategic Collaborations Text -->
+        <div>
           <div class="section-eyebrow"
             style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
             Strategic Collaborations
           </div>
-          <h2 class="section-title-center"
+          <h2 class="section-title"
             style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 38px); font-weight: 700; color: #0c2540; margin-bottom: 12px; line-height: 1.2;">
             CSR &amp; <span class="highlight" style="color: #c62222;">Government Support</span>
           </h2>
+          <div class="intro-divider" style="margin-bottom: 18px;">
+            <svg viewBox="0 0 200 20" class="divider-svg" style="width: 140px; height: 14px;">
+              <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
+            </svg>
+          </div>
           <p class="section-subtitle"
-            style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #475569; max-width: 760px; margin: 0 auto; line-height: 1.65; text-align: justify;">
+            style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; margin: 0; line-height: 1.75; text-align: justify;">
             Through strategic partnerships, financial assistance and professional training are provided to eligible
             candidates to empower sustainable self-employment.
           </p>
         </div>
 
-        <div
-          style="background: #f8fafc; border-radius: 16px; border: 1px solid rgba(12, 37, 64, 0.08); padding: 40px 30px; max-width: 860px; margin: 0 auto; box-shadow: 0 6px 20px rgba(0,0,0,0.03);"
-          data-aos="zoom-in">
+        <!-- Right Column: We Partner With Items -->
+        <div style="padding: 0;">
           <h3
-            style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 20px; text-align: center;">
-            We Partner With:</h3>
+            style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 20px; text-align: left; display: flex; align-items: center; gap: 8px;">
+            <span style="color: #c62222;">✦</span> We Partner With:
+          </h3>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
 
             <div
-              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.15); border-radius: 10px; padding: 18px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 14.5px; font-weight: 600; color: #0c2540;">
-              🏢 Corporate CSR programs
+              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.18); border-radius: 10px; padding: 16px 14px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                <line x1="9" y1="6" x2="9" y2="6.01"/>
+                <line x1="15" y1="6" x2="15" y2="6.01"/>
+                <line x1="9" y1="10" x2="9" y2="10.01"/>
+                <line x1="15" y1="10" x2="15" y2="10.01"/>
+                <line x1="9" y1="14" x2="9" y2="14.01"/>
+                <line x1="15" y1="14" x2="15" y2="14.01"/>
+                <line x1="9" y1="18" x2="15" y2="18"/>
+              </svg>
+              <span>Corporate CSR programs</span>
             </div>
 
             <div
-              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.15); border-radius: 10px; padding: 18px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 14.5px; font-weight: 600; color: #0c2540;">
-              🏦 Banks
+              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.18); border-radius: 10px; padding: 16px 14px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <line x1="3" y1="21" x2="21" y2="21"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <polyline points="12 3 2 10 22 10"/>
+                <line x1="6" y1="10" x2="6" y2="21"/>
+                <line x1="10" y1="10" x2="10" y2="21"/>
+                <line x1="14" y1="10" x2="14" y2="21"/>
+                <line x1="18" y1="10" x2="18" y2="21"/>
+              </svg>
+              <span>Banks</span>
             </div>
 
             <div
-              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.15); border-radius: 10px; padding: 18px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 14.5px; font-weight: 600; color: #0c2540;">
-              🏛️ Government self-employment schemes
+              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.18); border-radius: 10px; padding: 16px 14px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <path d="M12 2L2 7h20L12 2z"/>
+                <rect x="4" y="11" width="16" height="7"/>
+                <line x1="2" y1="22" x2="22" y2="22"/>
+                <line x1="8" y1="7" x2="8" y2="11"/>
+                <line x1="12" y1="7" x2="12" y2="11"/>
+                <line x1="16" y1="7" x2="16" y2="11"/>
+              </svg>
+              <span>Government self-employment schemes</span>
             </div>
 
             <div
-              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.15); border-radius: 10px; padding: 18px 16px; text-align: center; font-family: 'Poppins', sans-serif; font-size: 14.5px; font-weight: 600; color: #0c2540;">
-              🎯 Skill development programs
+              style="background: #ffffff; border: 1px solid rgba(198, 34, 34, 0.18); border-radius: 10px; padding: 16px 14px; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.02);">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#c62222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+              <span>Skill development programs</span>
             </div>
 
           </div>
 
           <p
-            style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; margin: 24px 0 0 0; text-align: center; font-style: italic;">
+            style="font-family: 'Poppins', sans-serif; font-size: 13.5px; color: #475569; margin: 20px 0 0 0; text-align: left; font-style: italic; line-height: 1.5;">
             Through these partnerships, financial assistance and training are provided to eligible candidates.
           </p>
         </div>
 
       </div>
-    </section>
 
-    <!-- SECTION: CONTACT US SECTION & FORM -->
-    <section class="sigp-contact-section" id="contact"
-      style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info" data-aos="fade-right">
-            <div class="section-eyebrow"
-              style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
-              Get In Touch
-            </div>
-            <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
-            <div class="intro-divider">
-              <svg viewBox="0 0 200 20" class="divider-svg">
-                <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
-              </svg>
-            </div>
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 24px;">
-              Ready to transform your future? Reach out to us for mentorship and equipment inquiries.
-            </p>
+    </div>
+  </section>
 
-            <div class="contact-methods">
-              <div class="contact-method">
-                <div class="cm-icon">
-                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                    <path
-                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Phone / WhatsApp</strong>
-                  <a href="https://wa.me/916385550203" target="_blank" rel="noopener">+91 6385550203</a>
-                </div>
+  <!-- SECTION: CONTACT US SECTION & FORM -->
+  <section class="sigp-contact-section" id="contact"
+    style="padding: 70px 0; background: #f8fafc; border-top: 1px solid rgba(12, 37, 64, 0.06);">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="section-eyebrow"
+            style="display: inline-block; color: #c62222; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">
+            Get In Touch
+          </div>
+          <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+          <div class="intro-divider">
+            <svg viewBox="0 0 200 20" class="divider-svg">
+              <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
+            </svg>
+          </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 15.5px; color: #475569; line-height: 1.7; margin-bottom: 24px;">
+            Ready to transform your future? Reach out to us for mentorship and equipment inquiries.
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="cm-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
               </div>
-              <div class="contact-method">
-                <div class="cm-icon">
-                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Email</strong>
-                  <a href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="cm-icon">
-                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                </div>
-                <div>
-                  <strong>Location</strong>
-                  <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai, Chennai, Tamil Nadu 600115, India</span>
-                </div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <a href="https://wa.me/916385550203" target="_blank" rel="noopener">+91 6385550203</a>
               </div>
             </div>
-
-            <p
-              style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #64748b; margin-top: 20px; font-style: italic;">
-              Empowering communities through professional laundry entrepreneurship. A Self-Income Generating Program
-              (SIGP) for Tamil Nadu.
-            </p>
+            <div class="contact-method">
+              <div class="cm-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="cm-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <strong>Location</strong>
+                <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai, Chennai, Tamil Nadu 600115, India</span>
+              </div>
+            </div>
           </div>
 
-          <div class="contact-form-wrap" data-aos="fade-left">
-            <div class="booking-form" id="bookingForm"
-              style="background: #ffffff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1.5px solid rgba(12, 37, 64, 0.08);">
-              <h3
-                style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 20px;">
-                SIGP Program Enquiry &amp; Mentorship
-              </h3>
-              <form id="sigpContactForm"
-                onsubmit="event.preventDefault(); alert('Thank you for reaching out to SIGP! Our mentorship team will contact you shortly.'); this.reset();">
-                <div class="form-row-2">
-                  <div class="form-group-item">
-                    <label for="sigpFullName">Full Name *</label>
-                    <input type="text" id="sigpFullName" class="form-input-ctrl" placeholder="Enter your full name"
-                      required />
-                  </div>
-                  <div class="form-group-item">
-                    <label for="sigpPhone">Phone / WhatsApp *</label>
-                    <input type="tel" id="sigpPhone" class="form-input-ctrl" placeholder="e.g. +91 9876543210"
-                      required />
-                  </div>
-                </div>
+          <p
+            style="font-family: 'Poppins', sans-serif; font-size: 14px; color: #64748b; margin-top: 20px; font-style: italic;">
+            Empowering communities through professional laundry entrepreneurship. A Self-Income Generating Program
+            (SIGP) for Tamil Nadu.
+          </p>
+        </div>
 
-                <div class="form-row-2">
-                  <div class="form-group-item">
-                    <label for="sigpEmail">Email Address</label>
-                    <input type="email" id="sigpEmail" class="form-input-ctrl" placeholder="name@example.com" />
-                  </div>
-                  <div class="form-group-item">
-                    <label for="sigpLocation">City / Town in Tamil Nadu *</label>
-                    <input type="text" id="sigpLocation" class="form-input-ctrl" placeholder="e.g. Chennai, Madurai"
-                      required />
-                  </div>
-                </div>
-
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <div class="booking-form" id="bookingForm"
+            style="background: #ffffff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1.5px solid rgba(12, 37, 64, 0.08);">
+            <h3
+              style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; margin-bottom: 20px;">
+              SIGP Program Enquiry &amp; Mentorship
+            </h3>
+            <form id="sigpContactForm"
+              onsubmit="event.preventDefault(); alert('Thank you for reaching out to SIGP! Our mentorship team will contact you shortly.'); this.reset();">
+              <div class="form-row-2">
                 <div class="form-group-item">
-                  <label for="sigpCategory">Applicant Category *</label>
-                  <select id="sigpCategory" class="form-input-ctrl" required>
-                    <option value="" disabled selected>Select applicant category</option>
-                    <option value="Dhobi">Traditional Dhobi Family</option>
-                    <option value="Women">Women / Homemaker</option>
-                    <option value="DifferentlyAbled">Differently-Abled Individual</option>
-                    <option value="Youth">Unemployed Youth</option>
-                    <option value="SmallBusiness">Aspiring Small Business Owner</option>
-                  </select>
+                  <label for="sigpFullName">Full Name *</label>
+                  <input type="text" id="sigpFullName" class="form-input-ctrl" placeholder="Enter your full name"
+                    required />
                 </div>
-
                 <div class="form-group-item">
-                  <label for="sigpMessage">Message / Mentorship Request</label>
-                  <textarea id="sigpMessage" class="form-input-ctrl" style="min-height: 80px;"
-                    placeholder="Tell us about your background or questions about capital, equipment & training support..."></textarea>
+                  <label for="sigpPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="sigpPhone" class="form-input-ctrl" placeholder="e.g. +91 9876543210" required />
                 </div>
+              </div>
 
-                <button type="submit" class="form-submit-btn"
-                  style="background: linear-gradient(135deg, #c62222 0%, #8c1616 100%);">Submit SIGP Enquiry</button>
-              </form>
-            </div>
+              <div class="form-row-2">
+                <div class="form-group-item">
+                  <label for="sigpEmail">Email Address</label>
+                  <input type="email" id="sigpEmail" class="form-input-ctrl" placeholder="name@example.com" />
+                </div>
+                <div class="form-group-item">
+                  <label for="sigpLocation">City / Town in Tamil Nadu *</label>
+                  <input type="text" id="sigpLocation" class="form-input-ctrl" placeholder="e.g. Chennai, Madurai"
+                    required />
+                </div>
+              </div>
+
+              <div class="form-group-item">
+                <label for="sigpCategory">Applicant Category *</label>
+                <select id="sigpCategory" class="form-input-ctrl" required>
+                  <option value="" disabled selected>Select applicant category</option>
+                  <option value="Dhobi">Traditional Dhobi Family</option>
+                  <option value="Women">Women / Homemaker</option>
+                  <option value="DifferentlyAbled">Differently-Abled Individual</option>
+                  <option value="Youth">Unemployed Youth</option>
+                  <option value="SmallBusiness">Aspiring Small Business Owner</option>
+                </select>
+              </div>
+
+              <div class="form-group-item">
+                <label for="sigpMessage">Message / Mentorship Request</label>
+                <textarea id="sigpMessage" class="form-input-ctrl" style="min-height: 80px;"
+                  placeholder="Tell us about your background or questions about capital, equipment & training support..."></textarea>
+              </div>
+
+              <button type="submit" class="form-submit-btn"
+                style="background: linear-gradient(135deg, #c62222 0%, #8c1616 100%);">Submit SIGP Enquiry</button>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   </div>
 
@@ -705,10 +867,10 @@
         <div class="footer-links-col">
           <h5>Reach Us</h5>
           <div class="footer-contact-info">
-            <p><span class="footer-icon">📱</span> <a href="tel:+916385550203">+91 6385550203</a></p>
-            <p><span class="footer-icon">📧</span> <a
+            <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> <a href="tel:+916385550203">+91 6385550203</a></p>
+            <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span> <a
                 href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a></p>
-            <p><span class="footer-icon">📍</span> <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai,
+            <p><span class="footer-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai,
                 Chennai, Tamil Nadu 600115</span></p>
           </div>
         </div>
