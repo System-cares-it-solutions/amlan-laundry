@@ -15,18 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Noto+Serif+Tamil:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Header styling for Our Story page */
-    @media (min-width: 901px) {
-      .header .nav-link:not([href*="contact"]) {
-        color: #000 !important;
-      }
-    }
-    .header {
-      background: rgba(255, 255, 255, 0.95) !important;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -45,32 +33,11 @@
       </div>
       <nav class="nav" id="nav">
         <a href="index.html#home" class="nav-link">Home</a>
-        <a href="index.html#services" class="nav-link">Services</a>
-        <a href="index.html#why" class="nav-link">Why Choose Us</a>
-        <a href="index.html#technology" class="nav-link">Equipment</a>
-        <a href="index.html#how-it-works" class="nav-link">How It Works</a>
-        <a href="index.html#prices" class="nav-link">Prices</a>
-        <a href="our-story.html" class="nav-link active">Our Story</a>
-        <div class="nav-dropdown" id="joinUsDropdown">
-          <button class="nav-link dropdown-toggle" id="joinUsBtn" type="button" aria-expanded="false">
-            <span>Join Us</span>
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" id="joinUsMenu">
-            <a href="index.html#contact?program=business" class="dropdown-item" data-program="Business Partner Program">
-              <span>Business Partner Program</span>
-            </a>
-            <a href="index.html#contact?program=self-income" class="dropdown-item" data-program="Self Income Generating Program">
-              <span>Self Income Generating Program</span>
-            </a>
-            <a href="index.html#contact?program=jobs" class="dropdown-item" data-program="Jobs">
-              <span>Jobs</span>
-            </a>
-          </div>
-        </div>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="index.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick up</a>
+        <a href="business-partner.html" class="nav-link">Business Partner Program</a>
+        <a href="sigp.html" class="nav-link">Self Income Generation Program</a>
+        <a href="index.html#storeMap" class="nav-link">Our Stores</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -181,7 +148,7 @@
         <div class="footer-links-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="our-story.html">Social Mission</a></li>
             <li><a href="index.html#why">Why Choose Us</a></li>
 

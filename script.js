@@ -431,6 +431,122 @@
     });
   }
 
+  // =============================================
+  // 14. NAV PROGRAM & SERVICE LINKS HANDLER
+  // =============================================
+  // =============================================
+  // 15. STORE LOCATOR SEARCH HANDLER
+  // =============================================
+  function initStoreLocatorSearch() {
+    const searchInput = document.getElementById('storeSearchInput');
+    const searchBtn = document.getElementById('storeSearchBtn');
+    const chips = document.querySelectorAll('.pincode-chip');
+    const storeCards = document.querySelectorAll('.store-card-item');
+
+    if (!storeCards.length) return;
+
+    function filterStores(query) {
+      const q = query.trim().toLowerCase();
+      let matchedCount = 0;
+
+      storeCards.forEach(card => {
+        const pincode = card.getAttribute('data-pincode') || '';
+        const keywords = card.getAttribute('data-keywords') || '';
+
+        if (!q || pincode.toLowerCase().includes(q) || keywords.toLowerCase().includes(q)) {
+          card.style.display = 'flex';
+          matchedCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Highlight matching chip if available
+      chips.forEach(chip => {
+        const chipVal = chip.getAttribute('data-search').toLowerCase();
+        chip.classList.toggle('active', chipVal === q);
+        if (chipVal === q) {
+          chip.style.background = '#0c2540';
+          chip.style.color = '#ffffff';
+        } else {
+          chip.style.background = 'rgba(12, 37, 64, 0.08)';
+          chip.style.color = '#0c2540';
+        }
+      });
+    }
+
+    if (searchBtn && searchInput) {
+      searchBtn.addEventListener('click', () => {
+        filterStores(searchInput.value);
+        const locationsSec = document.getElementById('storeLocations');
+        if (locationsSec) locationsSec.scrollIntoView({ behavior: 'smooth' });
+      });
+
+      searchInput.addEventListener('keyup', (e) => {
+        filterStores(searchInput.value);
+        if (e.key === 'Enter') {
+          const locationsSec = document.getElementById('storeLocations');
+          if (locationsSec) locationsSec.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const searchVal = chip.getAttribute('data-search');
+        if (searchInput) searchInput.value = searchVal;
+        filterStores(searchVal);
+        const locationsSec = document.getElementById('storeLocations');
+        if (locationsSec) locationsSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  }
+
+  // =============================================
+  // 16. FAQ ACCORDION TOGGLE
+  // =============================================
+  function initFAQAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-question-btn');
+      const content = item.querySelector('.faq-answer-content');
+      const icon = item.querySelector('.faq-icon');
+
+      if (!btn || !content) return;
+
+      btn.addEventListener('click', () => {
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+
+        // Close other items
+        faqItems.forEach(otherItem => {
+          const otherContent = otherItem.querySelector('.faq-answer-content');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          if (otherContent) otherContent.style.maxHeight = '0px';
+          if (otherIcon) {
+            otherIcon.textContent = '+';
+            otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        // Toggle current item
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          if (icon) {
+            icon.textContent = '−';
+            icon.style.transform = 'rotate(180deg)';
+          }
+        } else {
+          content.style.maxHeight = '0px';
+          if (icon) {
+            icon.textContent = '+';
+            icon.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+    });
+  }
+
   // Initialize all functions on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     initAOS();
@@ -444,6 +560,9 @@
     initExpandHoverList();
     initTechTabs();
     initJoinUsDropdown();
+    initNavProgramHandlers();
+    initStoreLocatorSearch();
+    initFAQAccordion();
   });
 
 })();

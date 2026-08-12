@@ -33,32 +33,11 @@
       </div>
       <nav class="nav" id="nav">
         <a href="#home" class="nav-link active">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#why" class="nav-link">Why Choose Us</a>
-        <a href="#technology" class="nav-link">Equipment</a>
-        <a href="#how-it-works" class="nav-link">How It Works</a>
-        <a href="#prices" class="nav-link">Prices</a>
-        <a href="our-story.html" class="nav-link">Our Story</a>
-        <div class="nav-dropdown" id="joinUsDropdown">
-          <button class="nav-link dropdown-toggle" id="joinUsBtn" type="button" aria-expanded="false">
-            <span>Join Us</span>
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"/>
-            </svg>
-          </button>
-          <div class="dropdown-menu" id="joinUsMenu">
-            <a href="#contact?program=business" class="dropdown-item" data-program="Business Partner Program">
-              <span>Business Partner Program</span>
-            </a>
-            <a href="#contact?program=self-income" class="dropdown-item" data-program="Self Income Generating Program">
-              <span>Self Income Generating Program</span>
-            </a>
-            <a href="#contact?program=jobs" class="dropdown-item" data-program="Jobs">
-              <span>Jobs</span>
-            </a>
-          </div>
-        </div>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick up</a>
+        <a href="business-partner.html" class="nav-link">Business Partner Program</a>
+        <a href="sigp.html" class="nav-link">Self Income Generation Program</a>
+        <a href="our-stores.html" class="nav-link">Our Stores</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -67,614 +46,122 @@
     </div>
   </header>
 
-  <!-- SAKTHI STYLE FULL-SCREEN HERO SLIDER -->
+  <!-- SAKTHI STYLE STATIC HERO SECTION -->
   <section class="hero" id="home">
-    <div class="hero-slider" id="heroSlider">
+    <div class="slide-bg slide-bg-1"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content hero-split-container" style="padding-top: 100px; padding-bottom: 70px;">
 
-      <!-- Slide 1: Premium Folded Laundry & Silk Care -->
-      <div class="hero-slide active" id="slide1">
-        <div class="slide-bg slide-bg-1"></div>
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="hero-title-tamil">Laundry for</span>
-            <span class="hero-title-main">Every Home</span>
-          </h1>
-          <p class="hero-subtitle">From everyday cottons &amp; veshtis to your finest Kanchipuram silk sarees, The
-            Salavai Laundry brings professional garment care to your doorstep. Simple booking, expert cleaning and
-            guaranteed on-time delivery.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+      <!-- Left Column: Title & Highlights -->
+      <div class="hero-left-col">
+        <h1 class="hero-title" style="margin-bottom: 24px;">
+          <span class="hero-title-main"
+            style="font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 700; color: #ffffff; letter-spacing: 0.5px; line-height: 1.25; text-transform: uppercase;">
+            Retail laundry <span style="color: #ff4d4d; margin: 0 6px;">|</span> Training and<br />Incubation Centre
+          </span>
+        </h1>
+
+        <!-- Highlight Badges / Icons -->
+        <div class="hero-highlights" style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+          <!-- Highlight 1: 100+ Setups Completed -->
+          <div class="hero-highlight-item"
+            style="display: inline-flex; align-items: center; gap: 14px; background: rgba(12, 37, 64, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 77, 77, 0.35); padding: 10px 22px 10px 14px; border-radius: 40px; color: #ffffff; font-size: 14.5px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.3); width: fit-content;">
+            <div
+              style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, rgba(198, 34, 34, 0.9) 0%, rgba(140, 22, 22, 0.9) 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(198, 34, 34, 0.4), 0 0 0 2px rgba(255, 77, 77, 0.3); flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 9-9"></path>
+                <path d="M12 21A9 9 0 1 0 3 12a9 9 0 0 0 .8 3.7"></path>
               </svg>
-              <span>Book Now</span>
-            </a>
-            <a href="#how-it-works" class="btn btn-secondary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <polygon points="10 8 16 12 10 16 10 8" />
-              </svg>
-              <span>See How It Works</span>
-            </a>
+            </div>
+            <span><strong
+                style="color: #ff4d4d; font-size: 16.5px; font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;">100+</strong>
+              setups completed</span>
           </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <strong data-count="10000" data-suffix="+">10,000+</strong>
-              <span>Happy Homes</span>
+
+          <!-- Highlight 2: Live Training Facility in Chennai -->
+          <div class="hero-highlight-item"
+            style="display: inline-flex; align-items: center; gap: 14px; background: rgba(12, 37, 64, 0.65); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 77, 77, 0.35); padding: 10px 22px 10px 14px; border-radius: 40px; color: #ffffff; font-size: 14.5px; font-weight: 600; box-shadow: 0 8px 24px rgba(0,0,0,0.3); width: fit-content;">
+            <div
+              style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, rgba(198, 34, 34, 0.9) 0%, rgba(140, 22, 22, 0.9) 100%); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(198, 34, 34, 0.4), 0 0 0 2px rgba(255, 77, 77, 0.3); flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ffffff" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <strong data-count="24" data-suffix="hr">24hr</strong>
-              <span>Turnaround</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <strong data-count="100" data-suffix="%">100%</strong>
-              <span>Fabric Protection</span>
-            </div>
+            <span style="display: inline-flex; align-items: center; gap: 8px;">
+              <span
+                style="width: 8px; height: 8px; border-radius: 50%; background: #00ff88; box-shadow: 0 0 10px #00ff88; display: inline-block;"></span>
+              live training facility in Chennai
+            </span>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2: Commercial LG Machines Facility -->
-      <div class="hero-slide" id="slide2">
-        <div class="slide-bg slide-bg-2"></div>
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="hero-title-tamil">Fresh, Clean Clothes.</span>
-            <span class="hero-title-main">Zero Hassle.</span>
-          </h1>
-          <p class="hero-subtitle">Powered by LG commercial washing systems &amp; Kleider Care fabric-safe
-            bio-detergents. Temperature-controlled wash cycles engineered to preserve colors, texture, and stitching.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-              </svg>
-              <span>Book Now</span>
-            </a>
-            <a href="#services" class="btn btn-secondary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="4" />
-                <circle cx="12" cy="12" r="5" />
-                <circle cx="7" cy="7" r="1.5" />
-              </svg>
-              <span>Our Services</span>
-            </a>
+      <!-- Right Column: 3 Cards in Single Row -->
+      <div class="hero-right-cards-row">
+
+        <!-- Card 1: Get Laundry Service -->
+        <a href="#storeMap" class="hero-right-card">
+          <div class="hero-rc-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
           </div>
-        </div>
+          <div class="hero-rc-content">
+            <h4 class="hero-rc-title">Get Laundry Service</h4>
+            <span class="hero-rc-cta">Our Stores →</span>
+          </div>
+        </a>
+
+        <!-- Card 2: Start Your Own Laundry Business -->
+        <a href="business-partner.html" class="hero-right-card nav-link">
+          <div class="hero-rc-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+          </div>
+          <div class="hero-rc-content">
+            <h4 class="hero-rc-title">Start Your Own Laundry Business</h4>
+            <span class="hero-rc-cta">Business Partner Program →</span>
+          </div>
+        </a>
+
+        <!-- Card 3: Build Income With Minimal Investment -->
+        <a href="sigp.html" class="hero-right-card nav-link">
+          <div class="hero-rc-icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <div class="hero-rc-content">
+            <h4 class="hero-rc-title">Build Income With Minimal Investment</h4>
+            <span class="hero-rc-cta">SIGP →</span>
+          </div>
+        </a>
+
       </div>
 
-      <!-- Slide 3: Doorstep Delivery Service -->
-      <div class="hero-slide" id="slide3">
-        <div class="slide-bg slide-bg-3"></div>
-        <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="hero-title-tamil">More Than Laundry —</span>
-            <span class="hero-title-main">A Movement.</span>
-          </h1>
-          <p class="hero-subtitle">Every order creates dignified livelihoods and technical skill-building for
-            traditional laundry workers across Tamil Nadu. Not charity. A better choice.</p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-              </svg>
-              <span>Book Now</span>
-            </a>
-            <a href="#story" class="btn btn-secondary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-              </svg>
-              <span>Our Story</span>
-            </a>
-          </div>
-          <div class="hero-stats">
-            <div class="stat">
-              <strong data-count="500" data-suffix="+">500+</strong>
-              <span>Dignified Jobs</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat">
-              <strong>Tamil Nadu</strong>
-              <span>Community Impact</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <!-- Slider Controls -->
-    <div class="slider-controls">
-      <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
-      <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
-      <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
-    </div>
-    <button class="slider-prev" id="sliderPrev" aria-label="Previous">&#8249;</button>
-    <button class="slider-next" id="sliderNext" aria-label="Next">&#8250;</button>
 
     <!-- Decorative border -->
-
+    <div class="hero-bottom-border"></div>
   </section>
 
-  <!-- SECTION 2: INTRODUCTION (ABOUT US - SAKTHI FRAMED PHOTO LAYOUT) -->
-  <section class="intro-section" id="about">
-
-    <div class="container">
-      <div class="intro-grid">
-        <div class="intro-text" data-aos="fade-right">
-          <div class="section-eyebrow">Your Neighbourhood Laundry</div>
-          <h2 class="section-title">Powered by a <span class="highlight">Bigger Purpose</span></h2>
-          <div class="intro-divider">
-            <svg viewBox="0 0 200 20" class="divider-svg">
-              <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
-            </svg>
-          </div>
-          <p class="intro-para">The Salavai Laundry is a professional laundry and garment care service built for modern
-            homes and businesses. We combine trained hands, modern machines and smart technology to give you clean,
-            fresh clothes, on time, every time.</p>
-          <p class="intro-para">Our purpose extends beyond laundry. We believe the laundry industry can be a powerful vehicle for creating sustainable livelihood opportunities and empowering economically underserved communities. Every garment entrusted to us enables us to deliver exceptional service while advancing a vision of inclusive growth and lasting social impact.</p>
-          <div style="margin-top: 25px;">
-            <a href="#contact" class="btn btn-primary magnetic-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-              </svg>
-              <span>Book Now</span>
-            </a>
-          </div>
-
-        </div>
-
-        <div class="intro-visual">
-          <div class="intro-photo-grid">
-            <div class="white-frame frame-slider" id="aboutFrame1">
-              <div class="frame-slide active"><img src="images/iron.png" alt="Steam Press Facility"
-                  class="intro-frame-img" /></div>
-              <div class="frame-slide"><img src="images/service_premium_silk.png" alt="Silk Garment Care"
-                  class="intro-frame-img" /></div>
-              <div class="frame-slide"><img src="images/iron 2.png" alt="Steam Ironing &amp; Garment Finishing"
-                  class="intro-frame-img" /></div>
-            </div>
-            <div class="white-frame frame-slider" id="aboutFrame2">
-              <div class="frame-slide active"><img src="images/staffs.png" alt="LG Washing Facility"
-                  class="intro-frame-img" /></div>
-              <div class="frame-slide"><img src="images/lg 1.png" alt="LG Wet Clean System"
-                  class="intro-frame-img" /></div>
-              <div class="frame-slide"><img src="images/delivery.png" alt="Doorstep Delivery Service"
-                  class="intro-frame-img" /></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- SECTION 3: SERVICES (SAKTHI STYLE FILTER TABS & PRODUCT CARDS GRID) -->
-  <section class="services-section" id="services">
-    <div class="services-bg-pattern"></div>
-    <div class="container">
-      <div class="services-header-row" data-aos="fade-up">
-        <div class="services-header-left">
-          <h2 class="section-title">Our Specialized <span class="highlight">Services</span></h2>
-          <p class="section-subtitle-left">From daily household loads to precious silk sarees &amp; wedding suits —
-            tailored care for every fabric.</p>
-        </div>
-        <div class="filter-icons-right">
-          <button class="filter-icon-btn active" data-filter="kg" title="KG Laundry">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
-              <line x1="7" y1="7" x2="7.01" y2="7" />
-            </svg>
-            <span class="icon-label">KG</span>
-          </button>
-          <button class="filter-icon-btn" data-filter="retail" title="Retail Formals">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M20.38 3.46L16 2a4 4 0 0 0-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z" />
-            </svg>
-            <span class="icon-label">Formals</span>
-          </button>
-          <button class="filter-icon-btn" data-filter="silk" title="Premium Silk Care">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-            <span class="icon-label">Silk</span>
-          </button>
-          <button class="filter-icon-btn" data-filter="delivery" title="Pickup &amp; Delivery">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="1" y="3" width="15" height="13" rx="2" />
-              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
-            <span class="icon-label">Pickup &amp; Delivery</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="services-grid">
-
-        <!-- KG Laundry -->
-        <div class="service-card" data-category="kg" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-card-media">
-            <img src="images/hero_laundry_1.png" alt="KG Laundry Service" class="service-card-img" />
-          </div>
-          <div class="service-card-body">
-            <div class="service-card-top">
-              <div class="service-title-wrap">
-                <h3>KG Laundry</h3>
-                <span class="service-tag">Most Popular</span>
-              </div>
-            </div>
-            <div class="service-divider"></div>
-            <h4 class="service-subheading">Everyday laundry, priced by weight, made simple.</h4>
-            <p class="service-desc">For families, students and anyone
-              with a weekly pile of laundry, KG Laundry is the easiest way to stay on top of things. Bag it, weigh it,
-              hand it over. We wash, dry and fold everything with care, so you get fresh clothes back without the
-              effort.</p>
-            <div class="service-best-for">
-              <span class="bf-label">Best for:</span>
-              <div class="bf-tags">
-                <span>Daily wear</span>
-                <span>Bedsheets</span>
-                <span>Towels</span>
-                <span>Everyday loads</span>
-              </div>
-            </div>
-            <div style="margin-top: 18px;">
-              <a href="#contact" class="btn btn-primary magnetic-btn" style="padding: 8px 20px; font-size: 13px;">Book Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Retail Laundry -->
-        <div class="service-card" data-category="retail" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-card-media">
-            <img src="images/shirts.png" alt="Retail Shirt &amp; Suit Steam Iron Care"
-              class="service-card-img" />
-          </div>
-          <div class="service-card-body">
-            <div class="service-card-top">
-              <div class="service-title-wrap">
-                <h3>Laundry</h3>
-                <span class="service-tag service-tag-blue">Per-Piece Precision</span>
-              </div>
-            </div>
-            <div class="service-divider"></div>
-            <h4 class="service-subheading">Per-piece care for your regular wardrobe.</h4>
-            <p class="service-desc">Some garments need a closer look. Retail
-              Laundry is priced per item, so shirts, trousers, sarees and everyday formalwear get individual attention,
-              correct handling and consistent finishing. Ideal for working professionals who want their clothes treated
-              one at a time, not by the bagful.</p>
-            <div class="service-best-for">
-              <span class="bf-label">Best for:</span>
-              <div class="bf-tags">
-                <span>Shirts</span>
-                <span>Trousers</span>
-                <span>Sarees</span>
-                <span>Formal wear</span>
-                <span>Individual items</span>
-              </div>
-            </div>
-            <div style="margin-top: 18px;">
-              <a href="#contact" class="btn btn-primary magnetic-btn" style="padding: 8px 20px; font-size: 13px;">Book Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Premium Laundry -->
-        <div class="service-card service-card-premium" data-category="silk" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-card-media">
-            <div class="image-ribbon">Special</div>
-            <img src="images/service_premium_silk.png" alt="Kanchipuram Silk Saree &amp; Suit Care"
-              class="service-card-img" />
-          </div>
-          <div class="service-card-body">
-            <div class="service-card-top">
-              <div class="service-title-wrap">
-                <h3>Delicate Garment Care</h3>
-                <span class="service-tag service-tag-gold">Specialist Touch</span>
-              </div>
-            </div>
-            <div class="service-divider"></div>
-            <h4 class="service-subheading">Expert care for your finest fabrics.</h4>
-            <p class="service-desc">Silks, suits, delicate fabrics and
-              special-occasion wear deserve a specialist's touch. Our Premium Laundry service uses gentle processes and
-              trained expertise to protect colour, texture and shape, so your best clothes stay your best clothes for
-              years.</p>
-            <div class="service-best-for">
-              <span class="bf-label">Best for:</span>
-              <div class="bf-tags">
-                <span>Silk</span>
-                <span>Wool</span>
-                <span>Suits</span>
-                <span>Delicates</span>
-                <span>Special occasion wear</span>
-              </div>
-            </div>
-            <div style="margin-top: 18px;">
-              <a href="#contact" class="btn btn-primary magnetic-btn" style="padding: 8px 20px; font-size: 13px;">Book Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Doorstep Pickup & Delivery -->
-        <div class="service-card service-card-delivery" data-category="delivery" data-aos="fade-up"
-          data-aos-delay="400">
-          <div class="service-card-media">
-            <img src="images/delivery.png" alt="Doorstep Pickup &amp; Delivery Executive"
-              class="service-card-img" />
-          </div>
-          <div class="service-card-body">
-            <div class="service-card-top">
-              <div class="service-title-wrap">
-                <h3>Pickup &amp; Delivery</h3>
-                <span class="service-tag service-tag-orange">We Come to You</span>
-              </div>
-            </div>
-            <div class="service-divider"></div>
-            <h4 class="service-subheading">We come to you. No need to step out.</h4>
-            <p class="service-desc">Schedule a pickup at a time that works for you,
-              and we will collect, clean and deliver your laundry right to your door. Track your order, skip the queue,
-              and get back your time.</p>
-            <div class="service-best-for">
-              <span class="bf-label">Best for:</span>
-              <div class="bf-tags">
-                <span>Busy professionals</span>
-                <span>Senior citizens</span>
-                <span>Apartment residents</span>
-                <span>Small businesses</span>
-              </div>
-            </div>
-            <div style="margin-top: 18px;">
-              <a href="#contact" class="btn btn-primary magnetic-btn" style="padding: 8px 20px; font-size: 13px;">Book Now</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: WHY CHOOSE US (FRAMER EXPAND-ONHOVER LIST) -->
-  <section class="why-section" id="why">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2 class="section-title-center">Why Choose <span class="highlight">The Salavai Laundry</span></h2>
-        <p class="section-subtitle">Seven reasons thousands of homes across Tamil Nadu trust us with their wardrobe.</p>
-      </div>
-
-      <div class="expand-hover-list" data-aos="fade-up" data-aos-delay="150">
-
-        <!-- Item 1 (Active by default) -->
-        <div class="expand-hover-item active" data-img="images/folding clothes.png">
-          <div class="item-header">
-            <span class="item-num">01</span>
-            <h3 class="item-title">Professional Fabric Care</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>Every garment is sorted and treated according to its fabric, so nothing gets damaged, faded or
-                mishandled.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/folding clothes.png" alt="Professional Fabric Care" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="expand-hover-item" data-img="images/affordabel.png">
-          <div class="item-header">
-            <span class="item-num">02</span>
-            <h3 class="item-title">Affordable for Every Home</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>From everyday KG Laundry to Premium garment care, there is a service and a price point for every
-                household.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/affordabel.png" alt="Affordable for Every Home" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="expand-hover-item" data-img="images/modern_processes.png">
-          <div class="item-header">
-            <span class="item-num">03</span>
-            <h3 class="item-title">Modern Equipment and Processes</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>We use industry-grade machines and standardised processes, so quality is never compromised.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/modern_processes.png" alt="Modern Equipment and Processes" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="expand-hover-item" data-img="images/delivery.png">
-          <div class="item-header">
-            <span class="item-num">04</span>
-            <h3 class="item-title">Pickup &amp; Delivery Convenience</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>Schedule a pickup, and we handle the rest. No queues, no travel, no lost time.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/delivery.png" alt="Pickup &amp; Delivery Convenience" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="expand-hover-item" data-img="images/transparent_pricing.png">
-          <div class="item-header">
-            <span class="item-num">05</span>
-            <h3 class="item-title">Transparent Pricing</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>You know what you're paying and why. No hidden charges, no surprises at delivery.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/transparent_pricing.png" alt="Transparent Pricing" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="expand-hover-item" data-img="images/service_premium_silk.png">
-          <div class="item-header">
-            <span class="item-num">06</span>
-            <h3 class="item-title">Skilled Garment Care</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>Every piece passes through trained hands that understand fabric, finish and detail.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/service_premium_silk.png" alt="Skilled Garment Care" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Item 7 -->
-        <div class="expand-hover-item" data-img="images/tech_enabled.png">
-          <div class="item-header">
-            <span class="item-num">07</span>
-            <h3 class="item-title">Technology-Enabled Service</h3>
-            <span class="item-arrow">→</span>
-          </div>
-          <div class="item-body">
-            <div class="item-text">
-              <p>Book, track and pay with a few taps. Laundry,made simple.</p>
-            </div>
-            <div class="item-media">
-              <img src="images/tech_enabled.png" alt="Technology-Enabled Service" class="item-img" />
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: TECHNOLOGY -->
-  <section class="tech-section" id="technology">
-    <div class="tech-dark-band">
-      <div class="container">
-        <div class="tech-band-inner">
-
-          <!-- Left: Big Visual + Floating Stats -->
-          <div class="tech-main-visual" data-aos="fade-right">
-            <div class="tech-img-wrap">
-              <img src="images/modern machines.png" alt="LG Commercial Wet Cleaning Drum" class="tech-big-img"
-                id="techBigImg" />
-              <div class="tech-live-chip">
-                <span class="tlc-dot"></span> Live Machine Active
-              </div>
-            </div>
-            <div class="tech-stat-strip">
-              <div class="tss-item">
-                <strong>Modern</strong>
-                <span>LAUNDRY EQUIPMENT</span>
-              </div>
-              <div class="tss-divider"></div>
-              <div class="tss-item">
-                <strong>100%</strong>
-                <span>ECO-FRIENDLY AGENTS</span>
-              </div>
-              <div class="tss-divider"></div>
-              <div class="tss-item">
-                <strong>Precise</strong>
-                <span>GARMENT CARE</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Title + Tabbed Tech Specs -->
-          <div class="tech-info-col" data-aos="fade-left">
-            <h2 class="tech-big-title">Our Equipment<span class="wave-underline-title">& Technology<svg
-                  class="wave-underline-svg" viewBox="0 0 200 20" preserveAspectRatio="none">
-                  <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3.5" fill="none"
-                    stroke-linecap="round"></path>
-                </svg></span></h2>
-            
-
-            <div class="tech-spec-tabs" id="techTabs">
-              <button class="tspec-tab active" data-tab="drum" data-img="images/modern machines.png">Modern Machines.</button>
-              <button class="tspec-tab" data-tab="thermal" data-img="images/lg wet cleaning.png">LG Wet Cleaning</button>
-              <button class="tspec-tab" data-tab="eco" data-img="images/kc chemicals.png">KC Chemicals</button>
-            </div>
-
-            <div class="tech-spec-panels">
-              <div class="tspec-panel active" id="tab-drum">
-                <div class="tsp-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M12 6v6l4 2" />
-                  </svg>
-                </div>
-                <h4>Modern Machines. Gentler on Every Fabric.</h4>
-                <p>With State-of-art infrastructure, The Salavai Laundry runs on world class commercial laundry equipment, trusted by leading hospitality and garment-care businesses. Precise temperature control, calibrated wash cycles and consistent drying mean every load gets the same high standard of care, whether it's your bedsheets or your best silk saree.</p>
-              </div>
-              <div class="tspec-panel" id="tab-thermal">
-                <div class="tsp-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
-                  </svg>
-                </div>
-                <h4>LG Wet Cleaning Machine: A Cleaner Way to Dry Clean</h4>
-                <p>Traditional dry cleaning relies on chemical solvents that can be harsh on fabric and on the environment. The LG Wet Cleaning Machine offers a smarter alternative. It uses water-based, biodegradable cleaning agents combined with precise drum motion and moisture control to clean delicate fabrics as thoroughly as dry cleaning, without the harsh chemicals resulting in a garment care process that protects colour, texture and shape, while being significantly kinder to the environment. We deliver premium cleaning that you and the planet can feel good about.</p>
-              </div>
-              <div class="tspec-panel" id="tab-eco">
-                <div class="tsp-icon">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-                  </svg>
-                </div>
-                <h4>Kleider Care: Chemicals Engineered for Fabric, Not Against It</h4>
-                <p>Every wash at The Salavai Laundry uses specialised detergents and cleaning agents from Kleider Care, formulated specifically for professional laundry use. These are engineered to deliver maximum cleaning performance while causing zero damage to fabric fibres, colour or finish.
-Kleider Care solutions are also designed with environmental safety in mind, so what's tough on stains stays gentle on the planet. It's how we deliver spotless, fresh results without compromising on fabric health or sustainability.
-</p>
-                
-              </div>
-            </div>
-
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- SECTION 6: HOW IT WORKS (SAKTHI 4-STEP PROCESS BAR) -->
+  <!-- SECTION: HOW IT WORKS -->
   <section class="how-section" id="how-it-works">
     <div class="how-bg"></div>
     <div class="container">
-      <h2 class="section-title-center" data-aos="fade-up">How It <span class="highlight">Works</span></h2>
+      <h2 class="section-title-center" data-aos="fade-up"><span class="how-it-text">How It</span> <span
+          class="highlight">Works</span></h2>
       <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Four quick steps to effortless, fresh laundry.
       </p>
       <div class="steps-track">
@@ -709,7 +196,8 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
               <img src="images/staffs.png" alt="Expert Cleaning" class="step-circle-img" />
             </div>
             <h4>3. Expert Cleaning</h4>
-            <p>Every item is sorted, treated and cleaned by trained hands, using the right process for the right fabric.</p>
+            <p>Every item is sorted, treated and cleaned by trained hands, using the right process for the right fabric.
+            </p>
           </div>
 
           <div class="step-connector">→</div>
@@ -728,8 +216,8 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
       <div class="how-cta" data-aos="zoom-in" style="margin-top: 35px; text-align: center;">
         <a href="#contact" class="btn btn-primary magnetic-btn">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
           </svg>
           <span>Book Now</span>
         </a>
@@ -737,205 +225,362 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
     </div>
   </section>
 
-  <!-- SECTION: TRANSPARENT PRICES -->
-  <section class="prices-section" id="prices">
+  <!-- SECTION: WHY CHOOSE US (FRAMER EXPAND-ONHOVER LIST) -->
+  <section class="why-section" id="why">
     <div class="container">
-      <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
-        <h2 class="section-title-center">Simple &amp; <span class="highlight">Transparent Pricing</span></h2>
-        <p class="section-subtitle">No hidden charges, no delivery surprises. Affordable fabric care tailored for every household.</p>
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="section-title-center">Why Choose <span class="highlight">The Salavai Laundry</span></h2>
+        <p class="section-subtitle">Seven reasons thousands of homes across Tamil Nadu trust us with their wardrobe.</p>
       </div>
 
-      <div class="pricing-cards-grid">
-        <!-- Card 1: KG Laundry -->
-        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="pricing-badge">Everyday Saver</div>
-          <h3 class="pricing-title">KG Laundry</h3>
-          <p class="pricing-sub">Priced by Weight</p>
-          <div class="pricing-price">
-            <span class="currency">₹</span>
-            <span class="amount">49</span>
-            <span class="unit">/ kg onwards</span>
+      <div class="expand-hover-list" data-aos="fade-up" data-aos-delay="150">
+
+        <!-- Item 1 (Active by default) -->
+        <div class="expand-hover-item active">
+          <div class="item-header">
+            <span class="item-num">01</span>
+            <h3 class="item-title">Professional Fabric Care</h3>
+            <span class="item-arrow">→</span>
           </div>
-          <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> Everyday wear, bedsheets &amp; towels</li>
-            <li><span class="check-icon">✓</span> Sanitized wash &amp; crisp tumble dry</li>
-            <li><span class="check-icon">✓</span> Neat folding &amp; hygienic packaging</li>
-            <li><span class="check-icon">✓</span> Free doorstep pickup on 5kg+ loads</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline pricing-btn">Book KG Wash</a>
+          <div class="item-body">
+            <div class="item-text">
+              <p>Every garment is sorted and treated according to its fabric, so nothing gets damaged, faded or
+                mishandled.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 2: Retail Per-Piece -->
-        <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
-          <div class="pricing-badge badge-popular">Most Popular</div>
-          <h3 class="pricing-title">Laundry</h3>
-          <p class="pricing-sub">Per-Piece Precision</p>
-          <div class="pricing-price">
-            <span class="currency">₹</span>
-            <span class="amount">35</span>
-            <span class="unit">/ piece onwards</span>
+        <!-- Item 2 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">02</span>
+            <h3 class="item-title">Affordable for Every Home</h3>
+            <span class="item-arrow">→</span>
           </div>
-          <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> Shirts, trousers, sarees &amp; formalwear</li>
-            <li><span class="check-icon">✓</span> Spot stain treatment &amp; collar inspection</li>
-            <li><span class="check-icon">✓</span> Professional steam ironing &amp; shape hold</li>
-            <li><span class="check-icon">✓</span> Choice of hanger or folded delivery</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary pricing-btn">Book Per-Piece</a>
+          <div class="item-body">
+            <div class="item-text">
+              <p>From everyday KG Laundry to Premium garment care, there is a service and a price point for every
+                household.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Card 3: Premium Silk Care -->
-        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="pricing-badge">Specialist Touch</div>
-          <h3 class="pricing-title">Premium Silk &amp; Suits</h3>
-          <p class="pricing-sub">Specialist Garment Care</p>
-          <div class="pricing-price">
-            <span class="currency">₹</span>
-            <span class="amount">199</span>
-            <span class="unit">/ item onwards</span>
+        <!-- Item 3 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">03</span>
+            <h3 class="item-title">Modern Equipment and Processes</h3>
+            <span class="item-arrow">→</span>
           </div>
-          <ul class="pricing-features">
-            <li><span class="check-icon">✓</span> Kanchipuram silks, suits, blazers &amp; woolens</li>
-            <li><span class="check-icon">✓</span> LG eco-wet cleaning (Zero perchloroethylene)</li>
-            <li><span class="check-icon">✓</span> Moisture-controlled gentle drum drying</li>
-            <li><span class="check-icon">✓</span> Garment bag protection &amp; luxury finish</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline pricing-btn">Book Premium Care</a>
+          <div class="item-body">
+            <div class="item-text">
+              <p>We use industry-grade machines and standardised processes, so quality is never compromised.</p>
+            </div>
+          </div>
         </div>
+
+        <!-- Item 4 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">04</span>
+            <h3 class="item-title">Pickup &amp; Delivery Convenience</h3>
+            <span class="item-arrow">→</span>
+          </div>
+          <div class="item-body">
+            <div class="item-text">
+              <p>Schedule a pickup, and we handle the rest. No queues, no travel, no lost time.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">05</span>
+            <h3 class="item-title">Transparent Pricing</h3>
+            <span class="item-arrow">→</span>
+          </div>
+          <div class="item-body">
+            <div class="item-text">
+              <p>You know what you're paying and why. No hidden charges, no surprises at delivery.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">06</span>
+            <h3 class="item-title">Skilled Garment Care</h3>
+            <span class="item-arrow">→</span>
+          </div>
+          <div class="item-body">
+            <div class="item-text">
+              <p>Every piece passes through trained hands that understand fabric, finish and detail.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="expand-hover-item">
+          <div class="item-header">
+            <span class="item-num">07</span>
+            <h3 class="item-title">Technology-Enabled Service</h3>
+            <span class="item-arrow">→</span>
+          </div>
+          <div class="item-body">
+            <div class="item-text">
+              <p>Book, track and pay with a few taps. Laundry,made simple.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <!-- CTA Button -->
+      <div class="why-cta-row" data-aos="fade-up"
+        style="margin-top: 30px; display: flex; justify-content: center; align-items: center;">
+        <a href="#storeMap" class="why-locate-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="why-locate-pin">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Locate Nearby Store</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" class="why-locate-arrow">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
     </div>
   </section>
 
-
-
-
-  <!-- SECTION: CONTACT / BOOKING FORM (SAKTHI FORM LAYOUT) -->
-  <section class="contact-section" id="contact">
+  <!-- SECTION 2: ABOUT US (CONTAINING ALL SUBSECTIONS & SERVICES, TECH, PRICING, CONTACT) -->
+  <section class="intro-section" id="about">
 
     <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info" data-aos="fade-right">
-          <h2 class="section-title">Contact <span class="highlight">Us</span></h2>
+      <div class="intro-grid">
+        <div class="intro-text" data-aos="fade-right">
+          <div class="section-eyebrow">Your Neighbourhood Laundry</div>
+          <h2 class="section-title">Powered by a <span class="highlight">Bigger Purpose</span></h2>
           <div class="intro-divider">
             <svg viewBox="0 0 200 20" class="divider-svg">
               <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
             </svg>
           </div>
-          <p>Ready to experience premium garment care at your doorstep? Fill out the form or send us a WhatsApp message
-            to schedule your pickup slot.</p>
+          <p class="intro-para">The Salavai Laundry is a professional laundry and garment care service built for modern
+            homes and businesses. We combine trained hands, modern machines and smart technology to give you clean,
+            fresh clothes, on time, every time.</p>
+          <p class="intro-para">Our purpose extends beyond laundry. We believe the laundry industry can be a powerful
+            vehicle for creating sustainable livelihood opportunities and empowering economically underserved
+            communities. Every garment entrusted to us enables us to deliver exceptional service while advancing a
+            vision of inclusive growth and lasting social impact.</p>
 
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="cm-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </div>
-              <div>
-                <strong>WhatsApp / Hotline</strong>
-                <a href="https://wa.me/916385550203" target="_blank" rel="noopener">+91 6385550203</a>
-              </div>
+          <div style="margin-top: 25px;">
+            <a href="#contact" class="btn btn-primary magnetic-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+              </svg>
+              <span>Book Now</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="intro-visual">
+          <div class="intro-photo-grid">
+            <div class="white-frame frame-slider" id="aboutFrame1">
+              <div class="frame-slide active"><img src="images/iron.png" alt="Steam Press Facility"
+                  class="intro-frame-img" /></div>
+              <div class="frame-slide"><img src="images/service_premium_silk.png" alt="Silk Garment Care"
+                  class="intro-frame-img" /></div>
+              <div class="frame-slide"><img src="images/iron 2.png" alt="Steam Ironing &amp; Garment Finishing"
+                  class="intro-frame-img" /></div>
             </div>
-            <div class="contact-method">
-              <div class="cm-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
-                </svg>
+            <div class="white-frame frame-slider" id="aboutFrame2">
+              <div class="frame-slide active"><img src="images/staffs.png" alt="LG Washing Facility"
+                  class="intro-frame-img" /></div>
+              <div class="frame-slide"><img src="images/lg 1.png" alt="LG Wet Clean System" class="intro-frame-img" />
               </div>
-              <div>
-                <strong>Email Support</strong>
-                <a href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="cm-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-              </div>
-              <div>
-                <strong>Active Service Locations</strong>
-                <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai, Chennai, Tamil Nadu 600115</span>
-              </div>
-            </div>
-            <div class="contact-method">
-              <div class="cm-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-              </div>
-              <div>
-                <strong>Service Hours</strong>
-                <span>Mon–Sat: 8 AM – 8 PM · Sun: 9 AM – 5 PM</span>
-              </div>
+              <div class="frame-slide"><img src="images/delivery.png" alt="Doorstep Delivery Service"
+                  class="intro-frame-img" /></div>
             </div>
           </div>
         </div>
-
-        <div class="contact-form-wrap" data-aos="fade-left">
-          <div class="booking-form" id="bookingForm" style="background: var(--white); border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border);">
-            <h3 style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 20px;">Send Us a Message / Schedule Pickup</h3>
-            <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you shortly.'); this.reset();">
-              <div class="form-row-2">
-                <div class="form-group-item">
-                  <label for="contactFullName">Full Name *</label>
-                  <input type="text" id="contactFullName" class="form-input-ctrl" placeholder="Enter your full name" required />
-                </div>
-                <div class="form-group-item">
-                  <label for="contactPhone">Phone / WhatsApp *</label>
-                  <input type="tel" id="contactPhone" class="form-input-ctrl" placeholder="e.g. +91 9876543210" required />
-                </div>
-              </div>
-
-              <div class="form-row-2">
-                <div class="form-group-item">
-                  <label for="contactService">Service / Program *</label>
-                  <select id="contactService" class="form-input-ctrl" required>
-                    <option value="" disabled selected>Select service or program</option>
-                    <option value="KG Laundry">KG Laundry</option>
-                    <option value="Laundry">Laundry (Per-Piece)</option>
-                    <option value="Delicate Garment Care">Delicate Garment Care</option>
-                    <option value="Pickup & Delivery">Pickup &amp; Delivery</option>
-                    <option value="SIGP">Self Income Generating Program (SIGP)</option>
-                    <option value="BPP">Business Partner Program (BPP)</option>
-                    <option value="Jobs">Careers / Jobs</option>
-                  </select>
-                </div>
-                <div class="form-group-item">
-                  <label for="contactLocation">Location / Area *</label>
-                  <input type="text" id="contactLocation" class="form-input-ctrl" placeholder="e.g. Neelankarai, Chennai" required />
-                </div>
-              </div>
-
-              <div class="form-group-item">
-                <label for="contactMessage">Message / Address Details</label>
-                <textarea id="contactMessage" class="form-input-ctrl" style="min-height: 80px;" placeholder="Tell us your pickup address or inquiry details..."></textarea>
-              </div>
-
-              <button type="submit" class="form-submit-btn">Submit Request</button>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <!-- Store Location Map -->
-      <div class="store-map-wrap" id="storeMap" style="margin-top: 50px;" data-aos="fade-up">
-        <h3 style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 15px; text-align: center;">Find Our Store</h3>
-        <iframe 
-          src="https://www.google.com/maps?q=2/658,+East+Coast+Rd,+Ranga+Reddy+Gardens,+Neelankarai,+Chennai,+Tamil+Nadu+600115&output=embed" 
-          width="100%" 
-          height="380" 
-          style="border:0; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
       </div>
     </div>
+
+    <!-- OUR MISSION PILLARS SUB-SECTION -->
+    <div class="pillars-sub-wrapper" style="padding: 50px 0 20px 0;">
+      <div class="container">
+        <div class="pillars-grid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; align-items: stretch;">
+
+          <!-- Pillar 1: Transform -->
+          <div class="standalone-pillar-card" data-aos="fade-up" data-aos-delay="100"
+            style="background: #ffffff; border: 1px solid rgba(12, 37, 64, 0.08); border-left: 4px solid #c62222; border-radius: 12px; padding: 28px 24px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);">
+            <div style="font-size: 22px; color: #c62222; margin-bottom: 8px;">✦</div>
+            <h3
+              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; letter-spacing: 0.5px; margin-bottom: 8px; text-transform: uppercase;">
+              Transform</h3>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">
+              Modernizing skills into professional enterprises.</p>
+          </div>
+
+          <!-- Pillar 2: Create -->
+          <div class="standalone-pillar-card" data-aos="fade-up" data-aos-delay="200"
+            style="background: #ffffff; border: 1px solid rgba(12, 37, 64, 0.08); border-left: 4px solid #c62222; border-radius: 12px; padding: 28px 24px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);">
+            <div style="font-size: 22px; color: #c62222; margin-bottom: 8px;">✦</div>
+            <h3
+              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; letter-spacing: 0.5px; margin-bottom: 8px; text-transform: uppercase;">
+              Create</h3>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">
+              Building scalable economic opportunities.</p>
+          </div>
+
+          <!-- Pillar 3: Deliver -->
+          <div class="standalone-pillar-card" data-aos="fade-up" data-aos-delay="300"
+            style="background: #ffffff; border: 1px solid rgba(12, 37, 64, 0.08); border-left: 4px solid #c62222; border-radius: 12px; padding: 28px 24px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);">
+            <div style="font-size: 22px; color: #c62222; margin-bottom: 8px;">✦</div>
+            <h3
+              style="font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 700; color: #0c2540; letter-spacing: 0.5px; margin-bottom: 8px; text-transform: uppercase;">
+              Deliver</h3>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #475569; line-height: 1.6; margin: 0;">
+              Quality service driving community prosperity.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SUB-SECTION: TRAINING & SKILL DEVELOPMENT -->
+    <div class="training-sub-wrapper" id="training"
+      style="padding: 40px 0 60px 0; background: transparent; color: #0c2540; position: relative; overflow: hidden;">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up" style="text-align: center; margin-bottom: 45px;">
+          <h2 class="section-title-center" style="color: #0c2540;">Training &amp; <span class="highlight"
+              style="color: #c62222;">Skill Development</span></h2>
+          <p class="section-subtitle"
+            style="color: #475569; max-width: 780px; margin: 12px auto 0; font-size: 16px; line-height: 1.6;">We provide
+            hands-on training programs designed to ensure mastery across all aspects of commercial laundry operations.</p>
+        </div>
+
+        <div class="training-grid"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+
+          <!-- Card 1: Equipment & Maintenance -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="100"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              Operation, troubleshooting, routine maintenance of commercial laundry equipment.</p>
+          </div>
+
+          <!-- Card 2: Fabric Handling & Stain Removal -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="150"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              Advanced fabric handling techniques and professional stain removal methods.</p>
+          </div>
+
+          <!-- Card 3: Workflow Management -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="200"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              End-to-end workflow management for efficient daily operations.</p>
+          </div>
+
+          <!-- Card 4: Hygiene & Safety Protocols -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="250"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              Hygiene protocols, safety compliance, and quality assurance frameworks.</p>
+          </div>
+
+          <!-- Card 5: Customer Service & Sustainability -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="300"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              Customer service excellence, strategic pricing models, and business sustainability practices.</p>
+          </div>
+
+          <!-- Card 6: Customer Relationships -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="350"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              How to handle customers and build relationships.</p>
+          </div>
+
+          <!-- Card 7: Pricing Strategies & Optimization -->
+          <div class="training-card" data-aos="fade-up" data-aos-delay="400"
+            style="background: #ffffff; border: none; border-radius: 12px; padding: 26px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; box-shadow: none; grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 520px;">
+            <div
+              style="width: 32px; height: 32px; background: transparent; border: none; color: #c62222; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <p
+              style="font-family: 'Poppins', sans-serif; font-size: 14.5px; color: #334155; line-height: 1.55; margin: 0;">
+              Pricing strategies and profit optimization methods.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- SAKTHI MASALA STYLE FOOTER -->
@@ -951,12 +596,15 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
           <p class="footer-tagline">Laundry for Every Home. Built on dignity, modern technology and community
             empowerment across Tamil Nadu.</p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/posts/the-salavai-laundry_laundrybusiness-entrepreneurship-thesalavailaundry-activity-7484917984507944960-bTLi?utm_source=share&utm_medium=member_android&rcm=ACoAAD2Jaw0B0jKsnyQsAJFEcDfkAmO2iVwPQBk" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/posts/the-salavai-laundry_laundrybusiness-entrepreneurship-thesalavailaundry-activity-7484917984507944960-bTLi?utm_source=share&utm_medium=member_android&rcm=ACoAAD2Jaw0B0jKsnyQsAJFEcDfkAmO2iVwPQBk"
+              class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z"/>
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.6 1.6 0 1 0 0 3.2 1.6 1.6 0 0 0 0-3.2z" />
               </svg>
             </a>
-            <a href="https://www.instagram.com/thesalavailaundry_neelankarai?igsh=MW9lZzFxMmx0N25rbg==" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/thesalavailaundry_neelankarai?igsh=MW9lZzFxMmx0N25rbg=="
+              class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
@@ -976,19 +624,19 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
         <div class="footer-links-col">
           <h5>Services</h5>
           <ul>
-            <li><a href="#services">KG Laundry</a></li>
-            <li><a href="#services">Retail Laundry</a></li>
-            <li><a href="#services">Premium Silk Care</a></li>
-            <li><a href="#services">Doorstep Pickup</a></li>
-            <li><a href="#technology">LG Commercial Tech</a></li>
+            <li><a href="about.html#services">KG Laundry</a></li>
+            <li><a href="about.html#services">Retail Laundry</a></li>
+            <li><a href="about.html#services">Premium Silk Care</a></li>
+            <li><a href="about.html#services">Doorstep Pickup</a></li>
+            <li><a href="about.html#technology">LG Commercial Tech</a></li>
           </ul>
         </div>
 
         <div class="footer-links-col">
           <h5>Company</h5>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#story">Social Mission</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="our-story.html">Social Mission</a></li>
             <li><a href="#why">Why Choose Us</a></li>
 
             <li><a href="#">Franchise Enquiry</a></li>
@@ -999,8 +647,10 @@ Kleider Care solutions are also designed with environmental safety in mind, so w
           <h5>Reach Us</h5>
           <div class="footer-contact-info">
             <p><span class="footer-icon">📱</span> <a href="tel:+91 6385550203">+91 6385550203</a></p>
-            <p><span class="footer-icon">📧</span> <a href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a></p>
-            <p><span class="footer-icon">📍</span> <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai, Chennai, Tamil Nadu 600115</span></p>
+            <p><span class="footer-icon">📧</span> <a
+                href="mailto:contact@thesalavailaundry.com">contact@thesalavailaundry.com</a></p>
+            <p><span class="footer-icon">📍</span> <span>2/658, East Coast Rd, Ranga Reddy Gardens, Neelankarai,
+                Chennai, Tamil Nadu 600115</span></p>
           </div>
         </div>
       </div>
