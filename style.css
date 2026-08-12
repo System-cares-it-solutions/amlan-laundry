@@ -554,8 +554,8 @@ button {
   z-index: 2;
   max-width: 1320px;
   width: 100%;
-  margin: 0 auto;
-  padding: 60px 48px;
+  margin: -60px auto 0 auto;
+  padding: 20px 48px 60px 48px;
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
   gap: 40px;
@@ -572,10 +572,10 @@ button {
 
 .hero-heading {
   font-family: 'Oswald', 'Poppins', sans-serif;
-  font-size: clamp(38px, 4.5vw, 62px);
+  font-size: clamp(46px, 5.5vw, 76px);
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.15;
+  line-height: 1.12;
   letter-spacing: 0.5px;
   margin: 0 0 16px 0;
   text-transform: none;
@@ -2808,9 +2808,17 @@ textarea.form-input-ctrl {
   margin-bottom: 16px;
 }
 
-.footer-logo-svg {
-  width: 50px;
-  height: 50px;
+.footer-logo-img {
+  height: 95px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.65)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.45));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.7));
 }
 
 .footer-brand-name {
@@ -2933,7 +2941,7 @@ textarea.form-input-ctrl {
 }
 
 .footer-kolam {
-  margin-bottom: 12px;
+  display: none !important;
 }
 
 .footer-kolam-svg {
@@ -4979,14 +4987,13 @@ html {
    BUSINESS PARTNER PROGRAM HERO SECTION
    ============================================ */
 .bpp-intro-section {
-  height: 100vh;
-  min-height: 550px;
-  max-height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px 0 0 0;
-  background: url('images/BG.png') no-repeat center center / cover;
+  padding: 100px 0 40px 0;
+  background: #114487 url('images/BPP-BG.svg') no-repeat center center / cover;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -4999,27 +5006,28 @@ html {
   justify-content: space-between;
   gap: 30px;
   width: 100%;
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 140px);
+  height: auto;
 }
 
 .bpp-hero-content {
-  flex: 1.1;
-  max-width: 630px;
-  align-self: flex-start;
-  margin-top: 25px;
+  flex: 1.2;
+  max-width: 720px;
+  align-self: center;
+  margin-top: 0;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 10px;
   text-align: left;
 }
 
 .bpp-hero-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', 'Oswald', sans-serif;
   font-size: clamp(28px, 3.8vw, 46px);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
-  text-transform: uppercase;
+  text-transform: none;
   text-align: left;
 }
 
@@ -5034,11 +5042,12 @@ html {
   font-weight: 400;
   line-height: 1.68;
   margin-bottom: 14px;
-  text-align: left;
+  text-align: justify;
 }
 
 .bpp-hero-actions {
-  margin-top: 22px;
+  margin-top: 24px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -5065,24 +5074,28 @@ html {
 }
 
 .bpp-hero-image-wrapper {
-  flex: 0.9;
+  flex: 1.4;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  max-width: 500px;
+  align-items: flex-end;
+  align-self: flex-end;
+  max-width: 760px;
   height: 100%;
   width: 100%;
   margin-top: 0;
+  margin-right: -40px;
   padding-top: 0;
 }
 
 .bpp-hero-img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 35px);
   object-fit: contain;
+  object-position: bottom right;
   display: block;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  transform: translate(20px, 75px);
 }
 
 @media (max-width: 992px) {
@@ -5103,6 +5116,7 @@ html {
 
   .bpp-hero-content {
     max-width: 100%;
+    margin-top: 0;
     padding-bottom: 0;
     align-self: auto;
     text-align: center;
@@ -5118,6 +5132,11 @@ html {
     justify-content: center;
     max-width: 380px;
     margin-top: 0;
+    margin-right: 0;
+  }
+
+  .bpp-hero-img {
+    transform: none;
   }
 
   .story-section {
@@ -5169,13 +5188,14 @@ html {
 
 .sigp-banner-title {
   font-family: 'Oswald', sans-serif;
-  font-size: clamp(32px, 4.5vw, 56px);
+  font-size: clamp(16px, 3.5vw, 52px);
   font-weight: 700;
   color: #000000;
   line-height: 1.2;
   margin-bottom: 16px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .sigp-banner-title .sigp-highlight-red {
@@ -5226,3 +5246,145 @@ html {
 .sigp-badge-blue {
   background: #16427c;
 }
+
+/* ============================================
+   OUR STORES HERO SECTION
+   ============================================ */
+.stores-hero-section {
+  height: calc(100vh - 90px);
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.stores-hero-section::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: url('images/image 3 (1).png') no-repeat center center / cover;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stores-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.stores-hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(32px, 5.2vw, 60px);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.stores-hero-title .highlight-red {
+  color: #d32f2f;
+}
+
+.stores-hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(14px, 1.8vw, 17px);
+  color: #333333;
+  max-width: 720px;
+  margin: 0 auto 36px auto;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.stores-search-box {
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 6px 6px 6px 18px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ffcdd2;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.stores-search-box:focus-within {
+  border-color: #e57373;
+  box-shadow: 0 8px 30px rgba(211, 47, 47, 0.12);
+}
+
+.stores-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.stores-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  font-weight: 400;
+  background: transparent;
+  padding: 8px 0;
+}
+
+.stores-search-input::placeholder {
+  color: #888888;
+  font-weight: 400;
+}
+
+.stores-search-btn {
+  background: #1565c0;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 10px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.stores-search-btn:hover {
+  background: #0d47a1;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .stores-hero-title {
+    white-space: nowrap;
+  }
+  .stores-search-box {
+    padding: 5px 5px 5px 14px;
+  }
+  .stores-search-btn {
+    padding: 9px 22px;
+    font-size: 13.5px;
+  }
+}
+

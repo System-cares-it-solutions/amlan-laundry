@@ -48,49 +48,27 @@
   <div class="stores-page-wrapper">
 
     <!-- HERO SECTION: LOCATE YOUR NEAREST STORE -->
-    <section class="stores-hero-section"
-      style="height: calc(100vh - 90px); min-height: 480px; display: flex; align-items: center; justify-content: center; padding: 0; background: #ffffff; color: #0c2540; text-align: center; position: relative; overflow: hidden; box-sizing: border-box;">
-      <div class="container" style="position: relative; z-index: 2;" data-aos="fade-up">
+    <section class="stores-hero-section">
+      <div class="container stores-hero-container" data-aos="fade-up">
 
-        <h1 style="font-family: 'Oswald', sans-serif; font-size: clamp(30px, 4.5vw, 50px); font-weight: 700; color: #0c2540; line-height: 1.2; margin-bottom: 14px; text-transform: uppercase;">
-          Locate Your <span style="color: #c62222;">Nearest Store</span>
+        <h1 class="stores-hero-title">
+          LOCATE YOUR NEAREST <span class="highlight-red">STORE</span>
         </h1>
 
-        <p style="font-family: 'Poppins', sans-serif; font-size: clamp(14px, 1.8vw, 17px); color: #4a5568; max-width: 760px; margin: 0 auto 24px auto; line-height: 1.55; font-weight: 500;">
-          Search by Pincode or Area name to find your active Salavai Laundry store, schedule doorstep pickup, or chat directly with our store team.
+        <p class="stores-hero-subtitle">
+          Search by Pincode or Area name to find your active Salavai Laundry store,<br>
+          schedule doorstep pickup, or chat directly with our store team.
         </p>
 
         <!-- PINCODE & AREA SEARCH BAR -->
-        <div style="max-width: 680px; margin: 0 auto 22px auto; background: #ffffff; padding: 8px 12px; border-radius: 50px; box-shadow: 0 10px 30px rgba(12, 37, 64, 0.1); display: flex; align-items: center; border: 2px solid rgba(198, 34, 34, 0.2); transition: all 0.3s ease;">
-          <div style="padding: 0 14px; color: #c62222; display: flex; align-items: center;">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
+        <div class="stores-search-box">
+          <div class="stores-search-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1565c0">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
             </svg>
           </div>
-          <input type="text" id="storeSearchInput" placeholder="Enter Pincode (e.g. 600115) or Area (e.g. Neelankarai, ECR)" style="flex: 1; border: none; outline: none; font-family: 'Poppins', sans-serif; font-size: 14px; color: #0c2540; font-weight: 500; background: transparent; padding: 8px 6px;" />
-          <button id="storeSearchBtn" class="btn btn-primary magnetic-btn" style="padding: 11px 26px; font-size: 13.5px; font-weight: 700; border-radius: 40px; text-transform: uppercase; white-space: nowrap;">
-            Search Store
-          </button>
-        </div>
-
-        <!-- QUICK FILTER PINCODE TAGS -->
-        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 24px;">
-          <span style="font-size: 13px; font-weight: 600; color: #718096; margin-right: 6px;">Popular Locations:</span>
-          <button class="pincode-chip active" data-search="600115" style="background: #0c2540; color: #ffffff; border: none; padding: 5px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s;">600115 (Neelankarai)</button>
-          <button class="pincode-chip" data-search="ECR" style="background: rgba(12, 37, 64, 0.08); color: #0c2540; border: none; padding: 5px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s;">ECR Road</button>
-          <button class="pincode-chip" data-search="Velachery" style="background: rgba(12, 37, 64, 0.08); color: #0c2540; border: none; padding: 5px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Velachery</button>
-          <button class="pincode-chip" data-search="Adyar" style="background: rgba(12, 37, 64, 0.08); color: #0c2540; border: none; padding: 5px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s;">Adyar</button>
-        </div>
-
-        <!-- ACTION BUTTONS -->
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="#storeLocations" class="btn btn-primary magnetic-btn" style="padding: 13px 28px; font-size: 13.5px; font-weight: 700; text-transform: uppercase;">
-            View Stores & Map
-          </a>
-          <a href="#contact" class="btn btn-outline magnetic-btn" style="padding: 13px 28px; font-size: 13.5px; font-weight: 700; text-transform: uppercase; border-color: #0c2540; color: #0c2540;">
-            Book Pickup Now
-          </a>
+          <input type="text" id="storeSearchInput" class="stores-search-input" placeholder="Enter Pin-code or Area name" />
+          <button id="storeSearchBtn" class="stores-search-btn">Search</button>
         </div>
 
       </div>
@@ -771,8 +749,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="images/salavai logo.png" alt="The Salavai Laundry Logo" class="footer-logo-img"
-              style="height: 60px; width: auto;" />
+            <img src="images/salavai trans.png" alt="The Salavai Laundry Logo" class="footer-logo-img" />
           </div>
           <p class="footer-tagline">Laundry for Every Home. Built on dignity, modern technology and community
             empowerment across Tamil Nadu.</p>
@@ -836,16 +813,6 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-kolam">
-          <svg viewBox="0 0 400 30" class="footer-kolam-svg">
-            <path d="M0 15 Q50 5 100 15 Q150 25 200 15 Q250 5 300 15 Q350 25 400 15" stroke="rgb(198, 34, 34)"
-              stroke-width="2" fill="none" />
-            <circle cx="50" cy="10" r="3" fill="#ff4d4d" />
-            <circle cx="150" cy="20" r="3" fill="#ff4d4d" />
-            <circle cx="250" cy="10" r="3" fill="#ff4d4d" />
-            <circle cx="350" cy="20" r="3" fill="#ff4d4d" />
-          </svg>
-        </div>
         <p class="footer-copy">© 2026 The Salavai Laundry. All rights reserved. &nbsp;|&nbsp; Laundry for Every Home
           &nbsp; </p>
         <p class="footer-mission">Crafted with pride. Dignity &amp; Care in Every Wash.</p>
