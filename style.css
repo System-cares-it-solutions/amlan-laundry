@@ -215,7 +215,7 @@ button {
   -webkit-backdrop-filter: none !important;
   box-shadow: none !important;
   border: none !important;
-  transition: var(--transition);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header.scrolled {
@@ -223,7 +223,17 @@ button {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* When header is scrolled (white background), change nav links to dark navy */
+/* Nav link colors when header is transparent on light/white pages */
+.header:not(.hero-dark-page) .nav-link:not(.nav-btn-pickup) {
+  color: #0c2540 !important;
+}
+
+.header:not(.hero-dark-page) .nav-link:not(.nav-btn-pickup):hover,
+.header:not(.hero-dark-page) .nav-link:not(.nav-btn-pickup).active {
+  color: #c62222 !important;
+}
+
+/* Nav link colors when scrolled */
 .header.scrolled .nav-link:not(.nav-btn-pickup) {
   color: #0c2540 !important;
 }
@@ -539,9 +549,12 @@ button {
   position: relative;
   overflow: hidden;
   background: var(--navy-deep);
-  min-height: 680px;
+  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .hero-overlay {
@@ -4653,6 +4666,11 @@ html {
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    height: auto !important;
+    min-height: 100vh !important;
+    padding: 120px 0 60px !important;
+  }
   .hero-split-container {
     grid-template-columns: 1fr;
     gap: 30px;

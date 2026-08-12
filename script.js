@@ -18,6 +18,26 @@
   }
 
   // =============================================
+  // HEADER TRANSPARENT & SCROLLED HANDLER
+  // =============================================
+  function initHeader() {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    function handleScroll() {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      updateScrollProgress();
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // =============================================
   // 2. AOS (ANIMATE ON SCROLL) INTERSECTION OBSERVER
   // =============================================
   function initAOS() {
