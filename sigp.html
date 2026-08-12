@@ -15,16 +15,6 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Noto+Serif+Tamil:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .header .nav-link:not(.nav-btn-pickup) {
-      color: #0c2540 !important;
-    }
-
-    .header .nav-link:not(.nav-btn-pickup):hover,
-    .header .nav-link:not(.nav-btn-pickup).active {
-      color: #c62222 !important;
-    }
-  </style>
 </head>
 
 <body>
@@ -37,18 +27,16 @@
     <div class="header-inner">
       <div class="logo">
         <a href="index.html">
-          <img src="images/salavai trans.png" alt="The Salavai Laundry Logo" class="logo-img"
-            style="height: 95px; width: auto;" />
+          <img src="images/salavai trans.png" alt="The Salavai Laundry Logo" class="logo-img" />
         </a>
       </div>
       <nav class="nav" id="nav">
-        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About Us</a>
-        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick
-          up</a>
         <a href="business-partner.html" class="nav-link">Business Partner Program</a>
         <a href="sigp.html" class="nav-link active">Self Income Generation Program</a>
         <a href="our-stores.html" class="nav-link">Our Stores</a>
+        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick up</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -60,27 +48,22 @@
   <div class="sigp-page-wrapper">
 
     <!-- BANNER SECTION -->
-    <section class="sigp-banner-section"
-      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 0 60px 0; background: #ffffff; color: #0c2540; text-align: center; position: relative; overflow: hidden; box-sizing: border-box;">
-      <div class="container" style="position: relative; z-index: 2;" data-aos="fade-up">
-        <h1
-          style="font-family: 'Oswald', sans-serif; font-size: clamp(30px, 4.5vw, 48px); font-weight: 700; color: #0c2540; line-height: 1.25; margin-bottom: 16px; text-transform: uppercase;">
-          Self-Income Generating Program <span style="color: #c62222;">(SIGP)</span>
+    <section class="sigp-banner-section">
+      <div class="container sigp-banner-container" data-aos="fade-up">
+        <h1 class="sigp-banner-title">
+          SELF INCOME GENERATING PROGRAM <span class="sigp-highlight-red">(SIGP)</span>
         </h1>
-        <p
-          style="font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; color: #c62222; margin-bottom: 24px; letter-spacing: 0.5px;">
-          Your Journey to Financial Independence starts here
+        <p class="sigp-banner-subtitle">
+          Your Journey To Financial Independence Starts Here
         </p>
 
         <!-- Highlights Badges -->
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 10px;">
-          <div
-            style="background: #ffffff; border: 1px solid rgba(12, 37, 64, 0.12); padding: 14px 28px; border-radius: 40px; font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
-            <span style="color: #c62222;">✦</span> Minimum Investment
+        <div class="sigp-badges-wrapper">
+          <div class="sigp-badge sigp-badge-red">
+            Minimum Investment
           </div>
-          <div
-            style="background: #ffffff; border: 1px solid rgba(12, 37, 64, 0.12); padding: 14px 28px; border-radius: 40px; font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 600; color: #0c2540; display: flex; align-items: center; gap: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
-            <span style="color: #c62222;">✦</span> Complete Training and Support
+          <div class="sigp-badge sigp-badge-blue">
+            Complete Training And Support
           </div>
         </div>
       </div>
@@ -114,8 +97,7 @@
             <div data-aos="fade-up" data-aos-delay="100" class="who-can-join-card"
               style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
               <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
-                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=800&q=80"
-                  onerror="this.src='images/folding clothes.png'" alt="Traditional dhobi families"
+                <img src="images/dhobi.jpeg" alt="Traditional dhobi families"
                   style="width: 100%; height: 100%; object-fit: cover;" />
               </div>
               <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
@@ -135,9 +117,8 @@
             <div data-aos="fade-up" data-aos-delay="150" class="who-can-join-card"
               style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
               <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
-                <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
-                  onerror="this.src='images/staffs.png'" alt="Women / Homemakers"
-                  style="width: 100%; height: 100%; object-fit: cover;" />
+                <img src="images/Cooking up some love in my favorite corner of the house!.jpg" alt="Women / Homemakers"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" />
               </div>
               <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
                 <h3
@@ -155,9 +136,8 @@
             <div data-aos="fade-up" data-aos-delay="200" class="who-can-join-card"
               style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
               <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
-                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80"
-                  onerror="this.src='images/real_social_impact.png'" alt="Differently-abled individuals"
-                  style="width: 100%; height: 100%; object-fit: cover;" />
+                <img src="images/Serva Dharma Ashram Trust India help sick, physical challenged people_.jpg" alt="Differently-abled individuals"
+                  style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" />
               </div>
               <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
                 <h3
@@ -181,8 +161,7 @@
             <div data-aos="fade-up" data-aos-delay="250" class="who-can-join-card"
               style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
               <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                  onerror="this.src='images/shirts.png'" alt="Unemployed youth"
+                <img src="images/Sahaj ties up with Techno India to skill 1 lakh rural youth.jpg" alt="Unemployed youth"
                   style="width: 100%; height: 100%; object-fit: cover;" />
               </div>
               <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">
@@ -202,8 +181,7 @@
             <div data-aos="fade-up" data-aos-delay="300" class="who-can-join-card"
               style="background: #ffffff; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.08); box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
               <div style="width: 100%; height: 185px; overflow: hidden; background: #f1f5f9;">
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
-                  onerror="this.src='images/booking.png'" alt="Aspiring small business owners"
+                <img src="images/A Guide to Starting a Small Business in Mexico as an American Entrepreneur.jpg" alt="Aspiring small business owners"
                   style="width: 100%; height: 100%; object-fit: cover;" />
               </div>
               <div style="padding: 22px 20px 24px 20px; flex-grow: 1; display: flex; flex-direction: column;">

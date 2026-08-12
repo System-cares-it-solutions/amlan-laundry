@@ -149,9 +149,37 @@
   // =============================================
   function initHeader() {
     const header = document.getElementById('header');
-    const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     const scrollTop = document.getElementById('scrollTop');
+
+    // Automatically highlight active nav link based on current page URL
+    function updateActiveNavLink() {
+      const path = window.location.pathname.toLowerCase();
+      let pageName = path.substring(path.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
+      if (!pageName || pageName === '') pageName = 'index.html';
+
+      navLinks.forEach(link => {
+        if (link.classList.contains('nav-btn-pickup')) return;
+
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        let linkPage = href.substring(href.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
+        if (!linkPage) linkPage = 'index.html';
+
+        const isCurrentPage = (
+          (pageName === 'index.html' && linkPage === 'index.html') ||
+          (pageName === linkPage) ||
+          (pageName === 'our-story.html' && linkPage === 'about.html')
+        );
+
+        if (isCurrentPage) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+
+    updateActiveNavLink();
 
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
@@ -168,24 +196,19 @@
         else scrollTop.classList.remove('visible');
       }
 
-      // Highlight active nav link based on scroll section
-      let currentSection = '';
-      sections.forEach(sec => {
-        const top = sec.offsetTop - 120;
-        const height = sec.offsetHeight;
-        if (scrollY >= top && scrollY < top + height) {
-          currentSection = sec.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + currentSection) {
-          link.classList.add('active');
-        }
-      });
-
       updateScrollProgress();
+    });
+
+    // Smooth scroll for Home links & logo on index page
+    const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/') || !window.location.pathname.includes('.html');
+    
+    document.querySelectorAll('a[href="#home"], a[href="index.html#home"], a[href="index.html"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (isHomePage) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
     });
 
     if (scrollTop) {
