@@ -320,14 +320,14 @@
       }
 
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Booking Your Pickup...';
+      submitBtn.textContent = 'Scheduling Your Pickup...';
 
       await new Promise(r => setTimeout(r, 1400));
 
       showToast(`Doorstep pickup booked for ${name}! Our representative will call ${phone} shortly.`, 'success');
       bookingForm.reset();
       submitBtn.disabled = false;
-      submitBtn.textContent = 'Book My Pickup';
+      submitBtn.textContent = 'Schedule Pick up';
     });
   }
 
