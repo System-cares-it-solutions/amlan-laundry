@@ -201,7 +201,7 @@
 
     // Smooth scroll for Home links & logo on index page
     const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/') || !window.location.pathname.includes('.html');
-    
+
     document.querySelectorAll('a[href="#home"], a[href="index.html#home"], a[href="index.html"]').forEach(link => {
       link.addEventListener('click', (e) => {
         if (isHomePage) {
@@ -597,6 +597,110 @@
     // Helper for program navigation links
   }
 
+  // =============================================
+  // 18. GARMENT PRICING TABLE FILTER & SEARCH
+  // =============================================
+  function initGarmentPricingTable() {
+    const tabs = document.querySelectorAll('.garment-tab-btn');
+    const searchInput = document.getElementById('garmentSearchInput');
+    const table = document.getElementById('garmentPricingTable');
+
+    if (!table) return;
+
+    const tbody = table.querySelector('tbody');
+    const rows = tbody.querySelectorAll('tr:not(.category-header-row):not(.no-match-row)');
+    const headerRows = tbody.querySelectorAll('tr.category-header-row');
+
+    const activeTab = document.querySelector('.garment-tab-btn.active');
+    let currentFilter = activeTab ? (activeTab.getAttribute('data-filter') || 'mens') : 'mens';
+    let currentSearch = '';
+
+    function filterTable() {
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const rowCategory = row.getAttribute('data-category');
+        const rowName = (row.getAttribute('data-name') || '').toLowerCase();
+        const matchesCategory = (currentFilter === 'all' || rowCategory === currentFilter);
+        const matchesSearch = (!currentSearch || rowName.includes(currentSearch));
+
+        if (matchesCategory && matchesSearch) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      // Toggle category headers based on filter and search
+      headerRows.forEach(header => {
+        const cat = header.getAttribute('data-category');
+        if (currentFilter !== 'all' && currentFilter !== cat) {
+          header.style.display = 'none';
+        } else if (currentSearch) {
+          // If searching, check if any row in this category is visible
+          const catRows = tbody.querySelectorAll(`tr[data-category="${cat}"]:not(.category-header-row)`);
+          const hasVisible = Array.from(catRows).some(r => r.style.display !== 'none');
+          header.style.display = hasVisible ? '' : 'none';
+        } else {
+          header.style.display = '';
+        }
+      });
+
+      // Handle "No matching items found"
+      let noMatchRow = tbody.querySelector('.no-match-row');
+      if (visibleCount === 0) {
+        if (!noMatchRow) {
+          noMatchRow = document.createElement('tr');
+          noMatchRow.className = 'no-match-row';
+          noMatchRow.innerHTML = `<td colspan="3" style="text-align:center; padding: 40px 20px; color: #64748b; font-size: 15px;">No garments found matching "<strong>${currentSearch}</strong>". Please try another search term.</td>`;
+          tbody.appendChild(noMatchRow);
+        } else {
+          noMatchRow.innerHTML = `<td colspan="3" style="text-align:center; padding: 40px 20px; color: #64748b; font-size: 15px;">No garments found matching "<strong>${currentSearch}</strong>". Please try another search term.</td>`;
+          noMatchRow.style.display = '';
+        }
+      } else if (noMatchRow) {
+        noMatchRow.style.display = 'none';
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.getAttribute('data-filter') || 'mens';
+        filterTable();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value.trim().toLowerCase();
+        filterTable();
+      });
+    }
+
+    // Run initial filter to display active tab (Men's 57 items)
+    filterTable();
+
+    // Minimize / Expand Table toggle logic
+    const toggleBtn = document.getElementById('garmentToggleBtn');
+    const collapsibleBody = document.getElementById('garmentCollapsibleBody');
+
+    if (toggleBtn && collapsibleBody) {
+      toggleBtn.addEventListener('click', () => {
+        const isCollapsed = collapsibleBody.classList.toggle('collapsed');
+        toggleBtn.classList.toggle('minimized', isCollapsed);
+        toggleBtn.setAttribute('aria-expanded', !isCollapsed);
+
+        const toggleText = toggleBtn.querySelector('.garment-toggle-text');
+        if (toggleText) {
+          toggleText.textContent = isCollapsed ? 'Expand Price List' : 'Minimize Price List';
+        }
+      });
+    }
+  }
+
   // Initialize all functions on DOM ready
   document.addEventListener('DOMContentLoaded', () => {
     if (typeof initAOS === 'function') initAOS();
@@ -613,6 +717,7 @@
     if (typeof initNavProgramHandlers === 'function') initNavProgramHandlers();
     if (typeof initStoreLocatorSearch === 'function') initStoreLocatorSearch();
     if (typeof initFAQAccordion === 'function') initFAQAccordion();
+    if (typeof initGarmentPricingTable === 'function') initGarmentPricingTable();
   });
 
 })();
