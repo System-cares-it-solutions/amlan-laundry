@@ -1,0 +1,21 @@
+# Enable Rewrite Engine safely
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Disable directory indexing
+Options -Indexes
+
+# Set proper character encoding
+AddDefaultCharset UTF-8
+
+# MIME Types for web assets
+<IfModule mod_mime.c>
+    AddType text/html .html
+    AddType text/css .css
+    AddType application/javascript .js
+    AddType image/svg+xml .svg
+    AddType image/webp .webp
+    AddType image/png .png
+    AddType image/jpeg .jpg .jpeg
+</IfModule>
