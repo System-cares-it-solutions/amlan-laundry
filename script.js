@@ -490,17 +490,21 @@
 
     function filterStores(query) {
       const q = query.trim().toLowerCase();
-      let matchedCount = 0;
 
       storeCards.forEach(card => {
-        const pincode = card.getAttribute('data-pincode') || '';
-        const keywords = card.getAttribute('data-keywords') || '';
+        const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+        const isNeelankarai = keywords.includes('neelankarai');
 
-        if (!q || pincode.toLowerCase().includes(q) || keywords.toLowerCase().includes(q)) {
+        if (!q) {
+          // Default state: show all active stores/zones
           card.style.display = 'flex';
-          matchedCount++;
         } else {
-          card.style.display = 'none';
+          // When user searches any location/pincode, show only Neelankarai Main Store & Hub
+          if (isNeelankarai) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
         }
       });
 
