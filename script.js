@@ -298,37 +298,146 @@
   }
 
   // =============================================
-  // 8. BOOKING FORM SUBMISSION & TOAST NOTIFICATION
+  // 8. EMAILJS CONTACT FORMS INTEGRATION
   // =============================================
-  function initBookingForm() {
-    const bookingForm = document.getElementById('bookingForm');
-    const submitBtn = document.getElementById('submitBtn');
+  const EMAILJS_PUBLIC_KEY = '6Gc6hDas_DeBPKDLt';
+  const EMAILJS_SERVICE_ID = 'service_cs1absd';
+  const EMAILJS_TEMPLATE_ID = 'template_7jvwjyx';
 
-    if (!bookingForm) return;
+  function initEmailJSForms() {
+    if (typeof emailjs !== 'undefined') {
+      try {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+      } catch (err) {
+        console.warn('EmailJS initialization warning:', err);
+      }
+    }
 
-    bookingForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    // Helper: Send email with EmailJS
+    function sendEnquiry(templateParams, submitBtn, formElement, successMsg) {
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
 
-      const name = document.getElementById('fullName').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const address = document.getElementById('address').value.trim();
-      const service = document.getElementById('service').value;
-
-      if (!name || !phone || !address || !service) {
-        showToast('Please fill in all required fields.', 'error');
+      if (typeof emailjs === 'undefined') {
+        showToast('Email service is loading. Please try again or WhatsApp us directly.', 'error');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
         return;
       }
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Scheduling Your Pickup...';
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+        .then(() => {
+          showToast(successMsg || 'Thank you! Your message has been sent successfully.', 'success');
+          formElement.reset();
+        })
+        .catch((error) => {
+          console.error('EmailJS Error:', error);
+          showToast('Failed to send message. Please contact us via WhatsApp: +91 6385550203', 'error');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        });
+    }
 
-      await new Promise(r => setTimeout(r, 1400));
+    // 1. Home Page & Our Stores Contact Form (contactForm)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const name = (document.getElementById('contactFullName')?.value || '').trim();
+        const phone = (document.getElementById('contactPhone')?.value || '').trim();
+        const service = document.getElementById('contactService')?.value || 'General Enquiry';
+        const location = (document.getElementById('contactLocation')?.value || '').trim();
+        const message = (document.getElementById('contactMessage')?.value || '').trim();
 
-      showToast(`Doorstep pickup booked for ${name}! Our representative will call ${phone} shortly.`, 'success');
-      bookingForm.reset();
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Schedule Pick up';
-    });
+        if (!name || !phone || !service || !location) {
+          showToast('Please fill in all required fields (*).', 'error');
+          return;
+        }
+
+        const pageTitle = document.title || 'Website Contact Form';
+        const templateParams = {
+          form_source: pageTitle.includes('Stores') ? 'Our Stores Page' : 'Home Page Contact Form',
+          from_name: name,
+          from_phone: phone,
+          from_email: 'Not provided',
+          location: location,
+          service_type: service,
+          message: message || 'No extra message provided.'
+        };
+
+        sendEnquiry(templateParams, submitBtn, contactForm, `Thank you ${name}! Your request has been received. Our team will contact you shortly.`);
+      });
+    }
+
+    // 2. SIGP Mentorship & Program Form (sigpContactForm)
+    const sigpForm = document.getElementById('sigpContactForm');
+    if (sigpForm) {
+      sigpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = sigpForm.querySelector('button[type="submit"]');
+        const name = (document.getElementById('sigpFullName')?.value || '').trim();
+        const phone = (document.getElementById('sigpPhone')?.value || '').trim();
+        const email = (document.getElementById('sigpEmail')?.value || '').trim() || 'Not provided';
+        const location = (document.getElementById('sigpLocation')?.value || '').trim();
+        const categorySelect = document.getElementById('sigpCategory');
+        const category = categorySelect?.options[categorySelect.selectedIndex]?.text || categorySelect?.value || 'SIGP Applicant';
+        const message = (document.getElementById('sigpMessage')?.value || '').trim();
+
+        if (!name || !phone || !location || !categorySelect?.value) {
+          showToast('Please fill in all required fields (*).', 'error');
+          return;
+        }
+
+        const templateParams = {
+          form_source: 'SIGP Program Application',
+          from_name: name,
+          from_phone: phone,
+          from_email: email,
+          location: location,
+          service_type: `SIGP - ${category}`,
+          message: message || 'No extra mentorship details provided.'
+        };
+
+        sendEnquiry(templateParams, submitBtn, sigpForm, `Thank you ${name}! Your SIGP enquiry has been received. Our mentorship team will contact you shortly.`);
+      });
+    }
+
+    // 3. Business Partner Program Form (bppContactForm)
+    const bppForm = document.getElementById('bppContactForm');
+    if (bppForm) {
+      bppForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = bppForm.querySelector('button[type="submit"]');
+        const name = (document.getElementById('bppFullName')?.value || '').trim();
+        const phone = (document.getElementById('bppPhone')?.value || '').trim();
+        const email = (document.getElementById('bppEmail')?.value || '').trim();
+        const location = (document.getElementById('bppLocation')?.value || '').trim();
+        const enquirySelect = document.getElementById('bppEnquiryType');
+        const enquiryType = enquirySelect?.options[enquirySelect.selectedIndex]?.text || enquirySelect?.value || 'BPP Partnership';
+        const message = (document.getElementById('bppMessage')?.value || '').trim();
+
+        if (!name || !phone || !email || !location || !enquirySelect?.value) {
+          showToast('Please fill in all required fields (*).', 'error');
+          return;
+        }
+
+        const templateParams = {
+          form_source: 'Business Partner Program (BPP)',
+          from_name: name,
+          from_phone: phone,
+          from_email: email,
+          location: location,
+          service_type: enquiryType,
+          message: message || 'No extra questions provided.'
+        };
+
+        sendEnquiry(templateParams, submitBtn, bppForm, `Thank you ${name}! Our BPP team will contact you regarding your partnership enquiry shortly.`);
+      });
+    }
   }
 
   // Toast notification
@@ -713,7 +822,7 @@
     if (typeof initMobileMenu === 'function') initMobileMenu();
     if (typeof initCounters === 'function') initCounters();
     if (typeof initCategoryFilter === 'function') initCategoryFilter();
-    if (typeof initBookingForm === 'function') initBookingForm();
+    if (typeof initEmailJSForms === 'function') initEmailJSForms();
     if (typeof initAboutFrameSliders === 'function') initAboutFrameSliders();
     if (typeof initExpandHoverList === 'function') initExpandHoverList();
     if (typeof initTechTabs === 'function') initTechTabs();
