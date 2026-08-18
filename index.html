@@ -39,8 +39,7 @@
         <a href="about.html" class="nav-link">About Us</a>
         <a href="business-partner.html" class="nav-link">Business Partner Program</a>
         <a href="sigp.html" class="nav-link">Self Income Generation Program</a>
-        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick
-          up</a>
+        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick up</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -58,12 +57,12 @@
       <!-- Left Column: Title, Accent Line, Subtitle & Primary Blue Button -->
       <div class="hero-left">
         <h1 class="hero-heading">
-          Retail laundry,<br />
+          Retail laundry,<br class="desktop-br" />
           Training and Incubation Centre
         </h1>
         <div class="hero-red-accent"></div>
         <p class="hero-subtitle">
-          Complete laundry solutions for your everyday needs and<br />
+          Complete laundry solutions for your everyday needs and<br class="desktop-br" />
           opportunities for your <span class="highlight-red">better tomorrow.</span>
         </p>
         <div class="hero-btn-group">
@@ -674,7 +673,7 @@
           <div class="pricing-price">
             <span class="currency">₹</span>
             <span class="amount">100</span>
-            <span class="unit">/ kg onwards</span>
+            <span class="unit">/ kg onwards <span style="display: block; font-size: 13px; color: #c62222; font-weight: 700; margin-top: 2px;">(Min 5 KG)</span></span>
           </div>
           <ul class="pricing-features">
             <li><span class="check-icon">✓</span> Everyday wear, bedsheets &amp; towels</li>
@@ -727,7 +726,7 @@
   </div>
 
   <!-- SUB-SECTION: CONTACT / BOOKING FORM -->
-  <div class="contact-sub-wrapper" id="contact" style="padding: 60px 0;">
+  <div class="contact-sub-wrapper contact-section" id="contact">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info" data-aos="fade-right">
@@ -737,16 +736,13 @@
               <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="rgb(198, 34, 34)" stroke-width="3" fill="none" />
             </svg>
           </div>
-          <p>Ready to experience premium garment care at your doorstep? Fill out the form or send us a WhatsApp
-            message
-            to schedule your pickup slot.</p>
+          <p>Ready to experience premium garment care at your doorstep? Fill out the form or send us a WhatsApp message to schedule your pickup slot.</p>
 
           <div class="contact-methods">
             <div class="contact-method">
               <div class="cm-icon">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0c2540" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
               </div>
               <div>
@@ -794,11 +790,8 @@
         </div>
 
         <div class="contact-form-wrap" data-aos="fade-left">
-          <div class="booking-form" id="bookingForm"
-            style="background: var(--white); border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border);">
-            <h3
-              style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 20px;">
-              Send Us a Message / Schedule Pickup</h3>
+          <div class="booking-form" id="bookingForm">
+            <h3 class="booking-form-title">Send Us a Message / Schedule Pickup</h3>
             <form id="contactForm">
               <div class="form-row-2">
                 <div class="form-group-item">
@@ -836,7 +829,7 @@
 
               <div class="form-group-item">
                 <label for="contactMessage">Message / Address Details</label>
-                <textarea id="contactMessage" class="form-input-ctrl" style="min-height: 80px;"
+                <textarea id="contactMessage" class="form-input-ctrl"
                   placeholder="Tell us your pickup address or inquiry details..."></textarea>
               </div>
 
@@ -847,13 +840,11 @@
       </div>
 
       <!-- Store Location Map -->
-      <div class="store-map-wrap" id="storeMap" style="margin-top: 50px;" data-aos="fade-up">
-        <h3
-          style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 15px; text-align: center;">
-          Find Our Store</h3>
+      <div class="store-map-wrap" id="storeMap" data-aos="fade-up">
+        <h3 class="store-map-title">Find Our Store</h3>
         <iframe
           src="https://www.google.com/maps?q=2/658,+East+Coast+Rd,+Ranga+Reddy+Gardens,+Neelankarai,+Chennai,+Tamil+Nadu+600115&output=embed"
-          width="100%" height="380" style="border:0; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);"
+          width="100%" height="380"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>

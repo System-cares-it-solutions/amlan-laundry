@@ -234,30 +234,51 @@
       document.body.appendChild(backdrop);
     }
 
-    function toggleMenu() {
-      const isOpen = nav.classList.toggle('open');
-      hamburger.classList.toggle('active', isOpen);
-      backdrop.classList.toggle('active', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    function openMenu() {
+      nav.classList.add('open');
+      hamburger.classList.add('active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     }
 
     function closeMenu() {
       nav.classList.remove('open');
       hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
       backdrop.classList.remove('active');
       document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
 
+    function toggleMenu() {
+      if (nav.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-controls', 'nav');
     hamburger.addEventListener('click', toggleMenu);
     backdrop.addEventListener('click', closeMenu);
 
-    // Close menu on link click
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Close menu on link click (including pickup button)
+    nav.querySelectorAll('a, .nav-link, .nav-btn-pickup').forEach(link => {
       link.addEventListener('click', closeMenu);
     });
 
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 900) {
+      if (window.innerWidth > 900 && nav.classList.contains('open')) {
         closeMenu();
       }
     });

@@ -36,8 +36,7 @@
         <a href="about.html" class="nav-link">About Us</a>
         <a href="business-partner.html" class="nav-link">Business Partner Program</a>
         <a href="sigp.html" class="nav-link">Self Income Generation Program</a>
-        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick
-          up</a>
+        <a href="our-stores.html#contact" class="nav-link nav-btn-pickup" data-service="Pickup & Delivery">Schedule Pick up</a>
       </nav>
 
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -57,8 +56,7 @@
         </h1>
 
         <p class="stores-hero-subtitle">
-          Search by Pincode or Area name to find your active Salavai Laundry store,<br>
-          schedule doorstep pickup, or chat directly with our store team.
+          Search by Pincode or Area name to find your active Salavai Laundry store, schedule doorstep pickup, or chat directly with our store team.
         </p>
 
         <!-- PINCODE & AREA SEARCH BAR -->
@@ -75,10 +73,9 @@
         </div>
 
         <!-- VIEW PRICE CTA BUTTON -->
-        <div style="margin-top: 24px; display: flex; justify-content: center; gap: 15px;">
-          <a href="#prices" class="btn btn-primary"
-            style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 4px 15px rgba(198, 34, 34, 0.3);">
-            <span style="font-size: 17px; font-weight: 800; line-height: 1;">₹</span>
+        <div class="stores-hero-cta-wrap">
+          <a href="#prices" class="stores-hero-price-btn">
+            <span class="currency-symbol">₹</span>
             View Pricing
           </a>
         </div>
@@ -482,7 +479,7 @@
             <div class="pricing-price">
               <span class="currency">₹</span>
               <span class="amount">100</span>
-              <span class="unit">/ kg onwards</span>
+              <span class="unit">/ kg onwards <span style="display: block; font-size: 13px; color: #c62222; font-weight: 700; margin-top: 2px;">(Min 5 KG)</span></span>
             </div>
             <ul class="pricing-features">
               <li><span class="check-icon">✓</span> Everyday wear, bedsheets &amp; towels</li>
@@ -1301,11 +1298,8 @@
           </div>
 
           <div class="contact-form-wrap" data-aos="fade-left">
-            <div class="booking-form" id="bookingForm"
-              style="background: var(--white); border-radius: var(--radius-md); padding: 32px; box-shadow: var(--shadow-sm); border: 1.5px solid var(--border);">
-              <h3
-                style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 20px;">
-                Send Us a Message / Schedule Pickup</h3>
+            <div class="booking-form" id="bookingForm">
+              <h3 class="booking-form-title">Send Us a Message / Schedule Pickup</h3>
               <form id="contactForm">
                 <div class="form-row-2">
                   <div class="form-group-item">
@@ -1343,7 +1337,7 @@
 
                 <div class="form-group-item">
                   <label for="contactMessage">Message / Address Details</label>
-                  <textarea id="contactMessage" class="form-input-ctrl" style="min-height: 80px;"
+                  <textarea id="contactMessage" class="form-input-ctrl"
                     placeholder="Tell us your pickup address or inquiry details..."></textarea>
                 </div>
 
@@ -1354,13 +1348,11 @@
         </div>
 
         <!-- Store Location Map -->
-        <div class="store-map-wrap" id="storeMap" style="margin-top: 50px;" data-aos="fade-up">
-          <h3
-            style="font-family: 'Oswald', 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy-primary); margin-bottom: 15px; text-align: center;">
-            Find Our Store</h3>
+        <div class="store-map-wrap" id="storeMap" data-aos="fade-up">
+          <h3 class="store-map-title">Find Our Store</h3>
           <iframe
             src="https://www.google.com/maps?q=2/658,+East+Coast+Rd,+Ranga+Reddy+Gardens,+Neelankarai,+Chennai,+Tamil+Nadu+600115&output=embed"
-            width="100%" height="380" style="border:0; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);"
+            width="100%" height="380"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
