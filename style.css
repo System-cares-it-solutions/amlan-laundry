@@ -26,7 +26,11 @@ video {
   height: auto;
 }
 
-/* Prevent horizontal overflow */
+/* Prevent horizontal overflow & smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -679,6 +683,39 @@ button {
   box-shadow: 0 8px 24px rgba(21, 82, 147, 0.6);
 }
 
+.hero-price-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #155293;
+  color: #ffffff !important;
+  padding: 14px 28px;
+  border-radius: 12px;
+  border: 2px solid #155293;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(21, 82, 147, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.hero-price-btn:hover {
+  background-color: #0d3c6e;
+  border-color: #0d3c6e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(21, 82, 147, 0.6);
+  color: #ffffff !important;
+}
+
+.hero-price-btn .currency-symbol {
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1;
+}
+
 /* Right Feature Stack Styling */
 .hero-right {
   display: flex;
@@ -726,6 +763,7 @@ button {
   }
 
   .hero {
+    background: transparent !important;
     height: 100vh !important;
     height: 100dvh !important;
     min-height: 100vh !important;
@@ -743,12 +781,7 @@ button {
   }
 
   .hero-overlay {
-    display: block !important;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(6, 24, 44, 0.68) 0%, rgba(6, 24, 44, 0.8) 55%, rgba(6, 24, 44, 0.92) 100%) !important;
-    z-index: 1;
-    pointer-events: none;
+    display: none !important;
   }
 
   .hero-container {
@@ -805,11 +838,12 @@ button {
   }
 
   .hero-blue-btn,
-  .hero-outline-btn {
+  .hero-outline-btn,
+  .hero-price-btn {
     flex: 1 !important;
-    min-width: 135px !important;
+    min-width: 120px !important;
     max-width: 180px !important;
-    padding: 11px 14px !important;
+    padding: 11px 12px !important;
     font-size: 13px !important;
     border-radius: 25px !important;
     text-align: center !important;
@@ -888,7 +922,8 @@ button {
   }
 
   .hero-blue-btn,
-  .hero-outline-btn {
+  .hero-outline-btn,
+  .hero-price-btn {
     width: 100% !important;
     max-width: 100% !important;
     padding: 10px 16px !important;
@@ -4593,6 +4628,103 @@ html {
   font-weight: 600;
 }
 
+/* --- MOBILE RESPONSIVENESS FOR SIMPLE & TRANSPARENT PRICING --- */
+@media (max-width: 992px) {
+  .prices-sub-wrapper {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 60px 0 !important;
+  }
+
+  .pricing-cards-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 480px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    gap: 24px !important;
+  }
+
+  .pricing-card {
+    padding: 30px 24px 28px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .prices-sub-wrapper {
+    padding: 45px 0 !important;
+  }
+
+  .prices-sub-wrapper .section-header {
+    margin-bottom: 24px !important;
+  }
+
+  .prices-sub-wrapper .section-title-center {
+    font-size: clamp(24px, 6.5vw, 30px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .prices-sub-wrapper .section-subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+
+  .pricing-cards-grid {
+    max-width: 100% !important;
+    gap: 18px !important;
+  }
+
+  .pricing-card {
+    padding: 24px 18px 22px !important;
+    box-shadow: 0 4px 18px rgba(6, 24, 44, 0.08) !important;
+  }
+
+  .pricing-title {
+    font-size: 19px !important;
+  }
+
+  .pricing-sub {
+    font-size: 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .pricing-price {
+    margin-bottom: 18px !important;
+  }
+
+  .pricing-price .currency {
+    font-size: 20px !important;
+  }
+
+  .pricing-price .amount {
+    font-size: 36px !important;
+  }
+
+  .pricing-price .unit {
+    font-size: 12px !important;
+  }
+
+  .pricing-features {
+    margin: 0 0 22px 0 !important;
+    gap: 10px !important;
+  }
+
+  .pricing-features li {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .pricing-btn {
+    padding: 11px 16px !important;
+    font-size: 13.5px !important;
+  }
+}
+
 
 /* ============================================
    HERO NAV CARDS — PREMIUM GLASSMORPHISM
@@ -5231,6 +5363,41 @@ html {
 }
 
 .why-locate-btn:hover .why-locate-arrow {
+  transform: translateX(4px);
+}
+
+/* View Price Transparent / Secondary Button in Why Section */
+.why-price-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #155293;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.why-price-btn svg {
+  stroke: #155293;
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.why-price-btn:hover {
+  color: #c62222;
+}
+
+.why-price-btn:hover svg {
+  stroke: #c62222;
+}
+
+.why-price-btn:hover .why-price-arrow {
   transform: translateX(4px);
 }
 
@@ -6087,6 +6254,215 @@ html {
   .stores-hero-price-btn {
     padding: 10px 22px;
     font-size: 13px;
+  }
+}
+
+/* ============================================
+   OUR ACTIVE STORE OUTLETS SECTION & CARDS
+   ============================================ */
+.store-locations-wrapper {
+  padding: 70px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.store-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.store-card-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 2px solid rgba(198, 34, 34, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(12, 37, 64, 0.1);
+}
+
+.store-card-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-card-status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.store-badge-open {
+  background: #e6f4ea;
+  color: #137333;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.store-pincode-tag {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #c62222;
+}
+
+.store-card-title {
+  font-family: 'Oswald', 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #0c2540;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.store-card-details {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.store-detail-row {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.store-detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.store-detail-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.store-card-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  border-top: 1px solid #edf2f7;
+  padding-top: 18px;
+  width: 100%;
+}
+
+.store-btn-whatsapp {
+  flex: 1;
+  min-width: 130px;
+  background: #0c2540;
+  color: #ffffff !important;
+  border: 1.5px solid #0c2540;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(12, 37, 64, 0.18);
+}
+
+.store-btn-whatsapp:hover {
+  background: #155293;
+  border-color: #155293;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(21, 82, 147, 0.3);
+}
+
+.store-btn-pickup {
+  flex: 1;
+  min-width: 130px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Store Outlets Mobile Responsiveness */
+@media (max-width: 768px) {
+  .store-locations-wrapper {
+    padding: 45px 0 35px 0 !important;
+  }
+
+  .store-locations-wrapper .section-header {
+    margin-bottom: 28px !important;
+  }
+
+  .store-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .store-card-item {
+    padding: 20px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .store-card-title {
+    font-size: 19px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .store-card-details {
+    font-size: 13px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .store-card-actions {
+    gap: 8px !important;
+    padding-top: 14px !important;
+  }
+
+  .store-btn-whatsapp,
+  .store-btn-pickup {
+    padding: 9px 12px !important;
+    font-size: 12.5px !important;
+    min-width: 120px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .store-card-item {
+    padding: 18px 14px !important;
+  }
+
+  .store-card-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .store-btn-whatsapp,
+  .store-btn-pickup {
+    width: 100% !important;
+    min-width: 100% !important;
   }
 }
 
