@@ -52,32 +52,35 @@
       <div class="container stores-hero-container" data-aos="fade-up">
 
         <h1 class="stores-hero-title">
-          LOCATE YOUR NEAREST <span class="highlight-red">STORE</span>
+          LOCATE YOUR<br />NEAREST <span class="highlight-red">STORE</span>
         </h1>
 
         <p class="stores-hero-subtitle">
           Search by Pincode or Area name to find your active Salavai Laundry store, schedule doorstep pickup, or chat directly with our store team.
         </p>
 
-        <!-- PINCODE & AREA SEARCH BAR -->
-        <div class="stores-search-box">
-          <div class="stores-search-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1565c0">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-            </svg>
+        <!-- ACTIONS ROW: SEARCH BAR & VIEW PRICING CTA IN SINGLE ROW -->
+        <div class="stores-hero-actions-row">
+          <!-- PINCODE & AREA SEARCH BAR -->
+          <div class="stores-search-box">
+            <div class="stores-search-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#1565c0">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+            </div>
+            <input type="text" id="storeSearchInput" class="stores-search-input"
+              placeholder="Enter Pin-code or Area name" />
+            <button id="storeSearchBtn" class="stores-search-btn">Search</button>
           </div>
-          <input type="text" id="storeSearchInput" class="stores-search-input"
-            placeholder="Enter Pin-code or Area name" />
-          <button id="storeSearchBtn" class="stores-search-btn">Search</button>
-        </div>
 
-        <!-- VIEW PRICE CTA BUTTON -->
-        <div class="stores-hero-cta-wrap">
-          <a href="#prices" class="stores-hero-price-btn">
-            <span class="currency-symbol">₹</span>
-            View Pricing
-          </a>
+          <!-- VIEW PRICE CTA BUTTON -->
+          <div class="stores-hero-cta-wrap">
+            <a href="#prices" class="stores-hero-price-btn">
+              <span class="currency-symbol">₹</span>
+              View Pricing
+            </a>
+          </div>
         </div>
 
       </div>
