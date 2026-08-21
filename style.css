@@ -4179,7 +4179,8 @@ textarea.form-input-ctrl {
   }
 
   .form-input-ctrl {
-    font-size: 16px !important; /* Prevents iOS auto-zoom */
+    font-size: 16px !important;
+    /* Prevents iOS auto-zoom */
     padding: 12px 14px !important;
     border-radius: 10px !important;
   }
@@ -5562,9 +5563,9 @@ html {
 .bpp-intro-section {
   min-height: calc(100vh - 85px);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 60px 0 20px 0;
+  padding: 60px 0 0 0;
   background: #114487 url('images/BPP-BG.svg') no-repeat center center / cover;
   color: #ffffff;
   position: relative;
@@ -5574,7 +5575,7 @@ html {
 
 .bpp-hero-grid {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
   width: 100%;
@@ -5585,8 +5586,8 @@ html {
   flex: 1.2;
   max-width: 680px;
   align-self: center;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 50px;
   text-align: left;
 }
 
@@ -5684,9 +5685,10 @@ html {
   align-items: flex-end;
   align-self: flex-end;
   max-width: 680px;
-  height: 100%;
   width: 100%;
   margin-right: -20px;
+  margin-bottom: 0;
+  line-height: 0;
 }
 
 .bpp-hero-img {
@@ -5696,6 +5698,8 @@ html {
   object-fit: contain;
   object-position: bottom right;
   display: block;
+  margin-bottom: 0;
+  vertical-align: bottom;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
 }
 
@@ -5705,6 +5709,7 @@ html {
     min-height: auto !important;
     padding: 50px 16px 0 16px !important;
     background-position: center top !important;
+    align-items: center !important;
   }
 
   .bpp-hero-grid {
@@ -5774,18 +5779,21 @@ html {
     max-width: 480px !important;
     width: 100% !important;
     margin: 20px auto 0 auto !important;
+    margin-bottom: 0 !important;
     line-height: 0 !important;
     display: flex !important;
   }
 
   .bpp-hero-img {
-    max-height: 380px !important;
+    max-height: 420px !important;
     width: 100% !important;
     max-width: 100% !important;
     object-fit: contain !important;
     object-position: bottom center !important;
     transform: none !important;
     margin: 0 auto !important;
+    margin-bottom: 0 !important;
+    vertical-align: bottom !important;
     display: block !important;
   }
 }
@@ -5813,11 +5821,13 @@ html {
     max-width: 360px !important;
     width: 100% !important;
     margin: 16px auto 0 auto !important;
+    margin-bottom: 0 !important;
   }
 
   .bpp-hero-img {
-    max-height: 320px !important;
+    max-height: 340px !important;
     width: 100% !important;
+    margin-bottom: 0 !important;
   }
 }
 
@@ -6190,7 +6200,8 @@ html {
   }
 
   .stores-search-input {
-    font-size: 16px; /* Prevents iOS Safari zoom */
+    font-size: 16px;
+    /* Prevents iOS Safari zoom */
     padding: 8px 0;
   }
 
@@ -7169,6 +7180,7 @@ html {
    ABOUT US MOBILE MEDIA QUERIES (<= 992px & <= 576px)
    ============================================ */
 @media (max-width: 992px) {
+
   .story-section,
   .gap-section,
   .chennai-section,
@@ -7244,6 +7256,7 @@ html {
 }
 
 @media (max-width: 480px) {
+
   .story-section,
   .gap-section,
   .chennai-section,
@@ -7506,6 +7519,7 @@ html {
    BPP PAGE MOBILE MEDIA QUERIES (<= 992px & <= 480px)
    ============================================ */
 @media (max-width: 992px) {
+
   .bpp-story-section,
   .bpp-gap-section,
   .bpp-cta-visit-section,
@@ -7563,6 +7577,7 @@ html {
 }
 
 @media (max-width: 480px) {
+
   .bpp-story-section,
   .bpp-gap-section,
   .bpp-cta-visit-section,
@@ -7966,6 +7981,7 @@ html {
    SIGP MOBILE MEDIA QUERIES (<= 992px & <= 576px)
    ============================================ */
 @media (max-width: 992px) {
+
   .sigp-join-section,
   .sigp-about-section,
   .sigp-provide-section,
@@ -8034,6 +8050,7 @@ html {
 }
 
 @media (max-width: 576px) {
+
   .sigp-join-section,
   .sigp-about-section,
   .sigp-provide-section,
