@@ -7,6 +7,9 @@
     RewriteEngine On
 </IfModule>
 
+# Set default landing page to Our Stores
+DirectoryIndex our-stores.html index.html
+
 # Disable directory indexing
 Options -Indexes
 

@@ -156,16 +156,17 @@
     function updateActiveNavLink() {
       const path = window.location.pathname.toLowerCase();
       let pageName = path.substring(path.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
-      if (!pageName || pageName === '') pageName = 'index.html';
+      if (!pageName || pageName === '') pageName = 'our-stores.html';
 
       navLinks.forEach(link => {
         if (link.classList.contains('nav-btn-pickup')) return;
 
         const href = (link.getAttribute('href') || '').toLowerCase();
         let linkPage = href.substring(href.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
-        if (!linkPage) linkPage = 'index.html';
+        if (!linkPage) linkPage = 'our-stores.html';
 
         const isCurrentPage = (
+          (pageName === 'our-stores.html' && linkPage === 'our-stores.html') ||
           (pageName === 'index.html' && linkPage === 'index.html') ||
           (pageName === linkPage) ||
           (pageName === 'our-story.html' && linkPage === 'about.html')
