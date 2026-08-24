@@ -809,34 +809,43 @@
                 <div class="form-group-item">
                   <label for="contactFullName">Full Name *</label>
                   <input type="text" id="contactFullName" class="form-input-ctrl" placeholder="Enter your full name"
-                    required />
+                    required minlength="2" />
                 </div>
                 <div class="form-group-item">
                   <label for="contactPhone">Phone / WhatsApp *</label>
-                  <input type="tel" id="contactPhone" class="form-input-ctrl" placeholder="e.g. +91 9876543210"
-                    required />
+                  <input type="tel" id="contactPhone" class="form-input-ctrl" placeholder="e.g. 9876543210"
+                    pattern="^(?:\+91[\-\s]?)?[6-9]\d{9}$"
+                    title="Please enter a valid 10-digit mobile number (e.g. 9876543210 or +91 9876543210)"
+                    maxlength="15" inputmode="tel" required />
                 </div>
               </div>
 
               <div class="form-row-2">
                 <div class="form-group-item">
-                  <label for="contactService">Service / Program *</label>
-                  <select id="contactService" class="form-input-ctrl" required>
-                    <option value="" disabled selected>Select service or program</option>
-                    <option value="KG Laundry">KG Laundry</option>
-                    <option value="Laundry">Laundry (Per-Piece)</option>
-                    <option value="Delicate Garment Care">Delicate Garment Care</option>
-                    <option value="Pickup & Delivery">Pickup &amp; Delivery</option>
-                    <option value="SIGP">Self Income Generating Program (SIGP)</option>
-                    <option value="BPP">Business Partner Program (BPP)</option>
-                    <option value="Jobs">Careers / Jobs</option>
-                  </select>
+                  <label for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-input-ctrl" placeholder="name@example.com"
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    title="Please enter a valid email address (e.g. name@example.com)" required />
                 </div>
                 <div class="form-group-item">
                   <label for="contactLocation">Location / Area *</label>
                   <input type="text" id="contactLocation" class="form-input-ctrl"
                     placeholder="e.g. Neelankarai, Chennai" required />
                 </div>
+              </div>
+
+              <div class="form-group-item">
+                <label for="contactService">Service / Program *</label>
+                <select id="contactService" class="form-input-ctrl" required>
+                  <option value="" disabled selected>Select service or program</option>
+                  <option value="KG Laundry">KG Laundry</option>
+                  <option value="Laundry">Laundry (Per-Piece)</option>
+                  <option value="Delicate Garment Care">Delicate Garment Care</option>
+                  <option value="Pickup & Delivery">Pickup &amp; Delivery</option>
+                  <option value="SIGP">Self Income Generating Program (SIGP)</option>
+                  <option value="BPP">Business Partner Program (BPP)</option>
+                  <option value="Jobs">Careers / Jobs</option>
+                </select>
               </div>
 
               <div class="form-group-item">

@@ -363,6 +363,17 @@
         });
     }
 
+    // Validation helpers
+    function isValidEmail(email) {
+      return /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(email);
+    }
+
+    function isValidMobile(phone) {
+      // Accepts 10-digit mobile numbers with or without +91 / 0 / spaces / dashes
+      const cleaned = phone.replace(/[\s\-\(\)]/g, '');
+      return /^(?:\+?91|0)?[6-9]\d{9}$/.test(cleaned);
+    }
+
     // 1. Home Page & Our Stores Contact Form (contactForm)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
@@ -371,12 +382,27 @@
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const name = (document.getElementById('contactFullName')?.value || '').trim();
         const phone = (document.getElementById('contactPhone')?.value || '').trim();
+        const email = (document.getElementById('contactEmail')?.value || '').trim();
         const service = document.getElementById('contactService')?.value || 'General Enquiry';
         const location = (document.getElementById('contactLocation')?.value || '').trim();
         const message = (document.getElementById('contactMessage')?.value || '').trim();
 
-        if (!name || !phone || !service || !location) {
+        if (!name || !phone || !email || !service || !location) {
           showToast('Please fill in all required fields (*).', 'error');
+          return;
+        }
+
+        if (!isValidMobile(phone)) {
+          showToast('Please enter a valid 10-digit mobile number (e.g. 9876543210).', 'error');
+          const phoneInput = document.getElementById('contactPhone');
+          if (phoneInput) phoneInput.focus();
+          return;
+        }
+
+        if (!isValidEmail(email)) {
+          showToast('Please enter a valid email address (e.g. name@example.com).', 'error');
+          const emailInput = document.getElementById('contactEmail');
+          if (emailInput) emailInput.focus();
           return;
         }
 
@@ -385,7 +411,7 @@
           form_source: pageTitle.includes('Stores') ? 'Our Stores Page' : 'Home Page Contact Form',
           from_name: name,
           from_phone: phone,
-          from_email: 'Not provided',
+          from_email: email,
           location: location,
           service_type: service,
           message: message || 'No extra message provided.'
@@ -598,6 +624,14 @@
 
         const programName = item.getAttribute('data-program');
         const messageInput = document.querySelector('#contact textarea, input[name="notes"]');
+        const serviceSelect = document.getElementById('contactService');
+        if (serviceSelect && programName) {
+          Array.from(serviceSelect.options).forEach(opt => {
+            if (opt.value.toLowerCase().includes(programName.toLowerCase()) || opt.text.toLowerCase().includes(programName.toLowerCase())) {
+              serviceSelect.value = opt.value;
+            }
+          });
+        }
         if (messageInput && programName) {
           messageInput.value = `Enquiry regarding: ${programName}`;
         }
@@ -608,6 +642,26 @@
   // =============================================
   // 14. NAV PROGRAM & SERVICE LINKS HANDLER
   // =============================================
+  function initNavProgramHandlers() {
+    // Listen to all Schedule Pickup and service CTA buttons across pages
+    const serviceButtons = document.querySelectorAll('[data-service], [data-program], .store-btn-pickup, .nav-btn-pickup');
+    serviceButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const serviceVal = btn.getAttribute('data-service') || btn.getAttribute('data-program') || 'Pickup & Delivery';
+        const serviceSelect = document.getElementById('contactService');
+        if (serviceSelect) {
+          const matchOption = Array.from(serviceSelect.options).find(opt => 
+            opt.value.toLowerCase() === serviceVal.toLowerCase() || 
+            opt.text.toLowerCase().includes(serviceVal.toLowerCase()) ||
+            serviceVal.toLowerCase().includes(opt.value.toLowerCase())
+          );
+          if (matchOption) {
+            serviceSelect.value = matchOption.value;
+          }
+        }
+      });
+    });
+  }
   // =============================================
   // 15. STORE LOCATOR SEARCH HANDLER
   // =============================================
@@ -725,12 +779,7 @@
     });
   }
 
-  // =============================================
-  // 17. PROGRAM NAVIGATION HANDLERS (FALLBACK)
-  // =============================================
-  function initNavProgramHandlers() {
-    // Helper for program navigation links
-  }
+
 
   // =============================================
   // 18. GARMENT PRICING TABLE FILTER & SEARCH
