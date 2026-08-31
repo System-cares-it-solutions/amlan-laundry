@@ -168,6 +168,7 @@
         const isCurrentPage = (
           (pageName === 'our-stores.html' && linkPage === 'our-stores.html') ||
           (pageName === 'index.html' && linkPage === 'index.html') ||
+          (pageName === 'pricing.html' && linkPage === 'pricing.html') ||
           (pageName === linkPage) ||
           (pageName === 'our-story.html' && linkPage === 'about.html')
         );
@@ -864,7 +865,7 @@
       });
     }
 
-    // Run initial filter to display active tab (Men's 57 items)
+    // Run initial filter to display active tab (Men's 56 items)
     filterTable();
 
     // Minimize / Expand Table toggle logic
