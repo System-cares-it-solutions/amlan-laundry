@@ -1,5 +1,5 @@
 /* ============================================
-   THE SALAVAI LAUNDRY - Sakthi Masala Interactive JS
+   PARISHUDHA LAUNDRY - Sakthi Masala Interactive JS
    ============================================ */
 
 (function () {
@@ -156,17 +156,16 @@
     function updateActiveNavLink() {
       const path = window.location.pathname.toLowerCase();
       let pageName = path.substring(path.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
-      if (!pageName || pageName === '') pageName = 'our-stores.html';
+      if (!pageName || pageName === '') pageName = 'index.html';
 
       navLinks.forEach(link => {
         if (link.classList.contains('nav-btn-pickup')) return;
 
         const href = (link.getAttribute('href') || '').toLowerCase();
         let linkPage = href.substring(href.lastIndexOf('/') + 1).split('#')[0].split('?')[0];
-        if (!linkPage) linkPage = 'our-stores.html';
+        if (!linkPage) linkPage = 'index.html';
 
         const isCurrentPage = (
-          (pageName === 'our-stores.html' && linkPage === 'our-stores.html') ||
           (pageName === 'index.html' && linkPage === 'index.html') ||
           (pageName === 'pricing.html' && linkPage === 'pricing.html') ||
           (pageName === linkPage) ||
@@ -323,9 +322,9 @@
   // =============================================
   // 8. EMAILJS CONTACT FORMS INTEGRATION
   // =============================================
-  const EMAILJS_PUBLIC_KEY = '6Gc6hDas_DeBPKDLt';
-  const EMAILJS_SERVICE_ID = 'service_cs1absd';
-  const EMAILJS_TEMPLATE_ID = 'template_7jvwjyx';
+  const EMAILJS_PUBLIC_KEY = 'QfCGNTbEDj4Lk8mx5';
+  const EMAILJS_SERVICE_ID = 'service_74r81st';
+  const EMAILJS_TEMPLATE_ID = 'template_xq68dlf';
 
   function initEmailJSForms() {
     if (typeof emailjs !== 'undefined') {
@@ -356,7 +355,7 @@
         })
         .catch((error) => {
           console.error('EmailJS Error:', error);
-          showToast('Failed to send message. Please contact us via WhatsApp: +91 6385550203', 'error');
+          showToast('Failed to send message. Please contact us via WhatsApp: +91 9944328471', 'error');
         })
         .finally(() => {
           submitBtn.disabled = false;
@@ -491,11 +490,11 @@
 
   // Toast notification
   function showToast(message, type = 'success') {
-    const existing = document.querySelector('.salavai-toast');
+    const existing = document.querySelector('.parishudha-toast');
     if (existing) existing.remove();
 
     const toast = document.createElement('div');
-    toast.className = 'salavai-toast salavai-toast-' + type;
+    toast.className = 'parishudha-toast parishudha-toast-' + type;
     toast.textContent = message;
 
     Object.assign(toast.style, {

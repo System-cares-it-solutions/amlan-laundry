@@ -1,10 +1,9 @@
 /* ============================================
-   THE SALAVAI LAUNDRY - Sakthi Masala Inspired Theme
+   PARISHUDHA LAUNDRY - Sakthi Masala Inspired Theme
    Deep Navy (#0c2540) & Sakthi Red Gradient Theme
    ============================================ */
 
 /* --- FONTS & RESET --- */
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Noto+Serif+Tamil:wght@400;600;700;800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
 
 /* Universal Box Sizing */
 * {
@@ -4433,7 +4432,7 @@ textarea.form-input-ctrl {
   }
 
   /* Toast Notification Safe Area on Mobile */
-  .salavai-toast {
+  .parishudha-toast {
     bottom: 20px !important;
     right: 16px !important;
     left: 16px !important;
@@ -6499,7 +6498,7 @@ html {
 }
 
 /* ============================================
-   SALAVAI LAUNDRY GARMENT PRICING LIST SECTION
+   PARISHUDHA LAUNDRY GARMENT PRICING LIST SECTION
    ============================================ */
 .garment-pricing-section {
   padding: 60px 0 80px;
