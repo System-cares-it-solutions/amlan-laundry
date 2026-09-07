@@ -166,10 +166,11 @@
         if (!linkPage) linkPage = 'index.html';
 
         const isCurrentPage = (
-          (pageName === 'index.html' && linkPage === 'index.html') ||
+          (pageName === 'index.html' && (linkPage === 'index.html' || linkPage === 'about.html')) ||
+          (pageName === 'about.html' && (linkPage === 'about.html' || linkPage === 'index.html')) ||
           (pageName === 'pricing.html' && linkPage === 'pricing.html') ||
           (pageName === linkPage) ||
-          (pageName === 'our-story.html' && linkPage === 'about.html')
+          (pageName === 'our-story.html' && (linkPage === 'about.html' || linkPage === 'index.html'))
         );
 
         if (isCurrentPage) {
