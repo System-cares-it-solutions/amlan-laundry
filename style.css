@@ -1,5 +1,5 @@
 /* ============================================
-   PARISHUDHA LAUNDRY - Sakthi Masala Inspired Theme
+   THE AMLAN LAUNDRY - Sakthi Masala Inspired Theme
    Deep Navy (#0c2540) & Sakthi Red Gradient Theme
    ============================================ */
 
@@ -28,21 +28,26 @@ video {
 /* Prevent horizontal overflow & smooth scroll */
 html {
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
   width: 0;
   height: 0;
 }
 
 body {
   overflow-x: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
 }
 
 :root {
@@ -5868,7 +5873,7 @@ html {
   max-width: 620px;
   height: 75vh;
   max-height: 620px;
-  background: url('images/Independence Day India Post.svg') no-repeat center center / contain;
+  background: url('images/west_bengal_map.png') no-repeat center center / contain;
   opacity: 0.12;
   z-index: 1;
   pointer-events: none;
@@ -6498,7 +6503,7 @@ html {
 }
 
 /* ============================================
-   PARISHUDHA LAUNDRY GARMENT PRICING LIST SECTION
+   THE AMLAN LAUNDRY GARMENT PRICING LIST SECTION
    ============================================ */
 .garment-pricing-section {
   padding: 60px 0 80px;
