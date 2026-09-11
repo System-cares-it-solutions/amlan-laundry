@@ -1,5 +1,5 @@
 /* ============================================
-   PARISHUDHA LAUNDRY - Sakthi Masala Interactive JS
+   THE AMLAN LAUNDRY - Sakthi Masala Interactive JS
    ============================================ */
 
 (function () {
@@ -356,7 +356,7 @@
         })
         .catch((error) => {
           console.error('EmailJS Error:', error);
-          showToast('Failed to send message. Please contact us via WhatsApp: +91 9944328471', 'error');
+          showToast('Failed to send message. Please contact us via WhatsApp: +91 93848 14933', 'error');
         })
         .finally(() => {
           submitBtn.disabled = false;

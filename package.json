@@ -1,0 +1,16 @@
+{
+  "name": "the-amlan-laundry",
+  "version": "1.0.0",
+  "description": "The Amlan Laundry & Incubation Centre Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "laundry",
+    "the-amlan-laundry"
+  ],
+  "author": "",
+  "license": "ISC"
+}
