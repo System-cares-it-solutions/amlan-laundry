@@ -1,0 +1,94 @@
+<!-- ============================================================= -->
+<!-- THE AMLAN LAUNDRY - EMAILJS CONTACT FORM HTML COMPONENT        -->
+<!-- Ready to paste into index.html or any page                     -->
+<!-- Connected to script.js: id="contactForm"                       -->
+<!-- ============================================================= -->
+
+<!-- 1. Include the EmailJS SDK in <head> or right before </body>: -->
+<!-- <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> -->
+
+<section class="section contact-section" id="contact" style="padding: 60px 0; background-color: #f8fafc;">
+  <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+    
+    <div style="text-align: center; margin-bottom: 36px;">
+      <span style="display: inline-block; background-color: #fee2e2; color: #c62222; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">
+        Get in Touch
+      </span>
+      <h2 style="font-size: 32px; font-weight: 800; color: #0c2540; margin: 0 0 10px 0;">
+        Contact The Amlan Laundry
+      </h2>
+      <p style="color: #64748b; font-size: 16px; margin: 0;">
+        Have a question, bulk laundry requirement, or enquiry? Send us a message and our team will get back to you promptly.
+      </p>
+    </div>
+
+    <div class="booking-form" id="bookingForm" style="background: #ffffff; padding: 36px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
+      <form id="contactForm">
+        
+        <!-- Row 1: Name & Phone -->
+        <div class="form-row-2" style="display: flex; gap: 16px; margin-bottom: 18px; flex-wrap: wrap;">
+          <div class="form-group-item" style="flex: 1; min-width: 240px;">
+            <label for="contactFullName" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+              Full Name *
+            </label>
+            <input type="text" id="contactFullName" class="form-input-ctrl" placeholder="e.g. John Doe" required style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; transition: border-color 0.2s;" />
+          </div>
+
+          <div class="form-group-item" style="flex: 1; min-width: 240px;">
+            <label for="contactPhone" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+              Phone / WhatsApp *
+            </label>
+            <input type="tel" id="contactPhone" class="form-input-ctrl" placeholder="e.g. +91 9876543210" required style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; transition: border-color 0.2s;" />
+          </div>
+        </div>
+
+        <!-- Row 2: Email & Location -->
+        <div class="form-row-2" style="display: flex; gap: 16px; margin-bottom: 18px; flex-wrap: wrap;">
+          <div class="form-group-item" style="flex: 1; min-width: 240px;">
+            <label for="contactEmail" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+              Email Address *
+            </label>
+            <input type="email" id="contactEmail" class="form-input-ctrl" placeholder="name@example.com" required style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; transition: border-color 0.2s;" />
+          </div>
+
+          <div class="form-group-item" style="flex: 1; min-width: 240px;">
+            <label for="contactLocation" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+              City / Location *
+            </label>
+            <input type="text" id="contactLocation" class="form-input-ctrl" placeholder="e.g. Chennai, Kolkata, Madurai" required style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; transition: border-color 0.2s;" />
+          </div>
+        </div>
+
+        <!-- Row 3: Service Enquiry Type -->
+        <div class="form-group-item" style="margin-bottom: 18px;">
+          <label for="contactService" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+            Service / Enquiry Type *
+          </label>
+          <select id="contactService" class="form-input-ctrl" required style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; background: #fff; outline: none; transition: border-color 0.2s;">
+            <option value="Retail Laundry & Dry Cleaning" selected>Retail Laundry &amp; Dry Cleaning</option>
+            <option value="Commercial / Institutional Laundry">Commercial / Institutional Laundry</option>
+            <option value="Business Partner Program (BPP)">Business Partner Program (BPP)</option>
+            <option value="Self Income Generation Program (SIGP)">Self Income Generation Program (SIGP)</option>
+            <option value="Equipment & Training Support">Equipment &amp; Training Support</option>
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
+        </div>
+
+        <!-- Row 4: Message -->
+        <div class="form-group-item" style="margin-bottom: 24px;">
+          <label for="contactMessage" style="display: block; font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 6px;">
+            Your Message
+          </label>
+          <textarea id="contactMessage" class="form-input-ctrl" rows="4" placeholder="Tell us how we can help you..." style="width: 100%; padding: 12px 14px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; resize: vertical;"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="form-submit-btn" style="width: 100%; padding: 14px; background: linear-gradient(135deg, #c62222 0%, #8c1616 100%); color: #ffffff; border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(198, 34, 34, 0.35);">
+          Send Message
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>

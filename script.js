@@ -323,9 +323,9 @@
   // =============================================
   // 8. EMAILJS CONTACT FORMS INTEGRATION
   // =============================================
-  const EMAILJS_PUBLIC_KEY = 'QfCGNTbEDj4Lk8mx5';
-  const EMAILJS_SERVICE_ID = 'service_74r81st';
-  const EMAILJS_TEMPLATE_ID = 'template_xq68dlf';
+  const EMAILJS_PUBLIC_KEY = '0kQOXWc4hcS2hSk0q';
+  const EMAILJS_SERVICE_ID = 'service_gdvryub';
+  const EMAILJS_TEMPLATE_ID = 'template_akzm0na';
 
   function initEmailJSForms() {
     if (typeof emailjs !== 'undefined') {
