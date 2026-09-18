@@ -323,9 +323,9 @@
   // =============================================
   // 8. EMAILJS CONTACT FORMS INTEGRATION
   // =============================================
-  const EMAILJS_PUBLIC_KEY = 'QfCGNTbEDj4Lk8mx5';
-  const EMAILJS_SERVICE_ID = 'service_74r81st';
-  const EMAILJS_TEMPLATE_ID = 'template_xq68dlf';
+  const EMAILJS_PUBLIC_KEY = '0kQOXWc4hcS2hSk0q';
+  const EMAILJS_SERVICE_ID = 'service_gdvryub';
+  const EMAILJS_TEMPLATE_ID = 'template_m142zrk';
 
   function initEmailJSForms() {
     if (typeof emailjs !== 'undefined') {
@@ -411,11 +411,24 @@
         const templateParams = {
           form_source: pageTitle.includes('Stores') ? 'Our Stores Page' : 'Home Page Contact Form',
           from_name: name,
+          name: name,
+          user_name: name,
           from_phone: phone,
+          phone: phone,
+          user_phone: phone,
           from_email: email,
+          email: email,
+          user_email: email,
+          reply_to: email,
           location: location,
+          city: location,
+          city_town: location,
+          town: location,
           service_type: service,
-          message: message || 'No extra message provided.'
+          service: service,
+          category: service,
+          message: message || 'No extra message provided.',
+          notes: message || 'No extra message provided.'
         };
 
         sendEnquiry(templateParams, submitBtn, contactForm, `Thank you ${name}! Your request has been received. Our team will contact you shortly.`);
@@ -444,11 +457,24 @@
         const templateParams = {
           form_source: 'SIGP Program Application',
           from_name: name,
+          name: name,
+          user_name: name,
           from_phone: phone,
+          phone: phone,
+          user_phone: phone,
           from_email: email,
+          email: email,
+          user_email: email,
+          reply_to: email !== 'Not provided' ? email : '',
           location: location,
+          city: location,
+          city_town: location,
+          town: location,
           service_type: `SIGP - ${category}`,
-          message: message || 'No extra mentorship details provided.'
+          service: `SIGP - ${category}`,
+          category: category,
+          message: message || 'No extra mentorship details provided.',
+          notes: message || 'No extra mentorship details provided.'
         };
 
         sendEnquiry(templateParams, submitBtn, sigpForm, `Thank you ${name}! Your SIGP enquiry has been received. Our mentorship team will contact you shortly.`);
@@ -477,11 +503,24 @@
         const templateParams = {
           form_source: 'Business Partner Program (BPP)',
           from_name: name,
+          name: name,
+          user_name: name,
           from_phone: phone,
+          phone: phone,
+          user_phone: phone,
           from_email: email,
+          email: email,
+          user_email: email,
+          reply_to: email,
           location: location,
+          city: location,
+          city_town: location,
+          town: location,
           service_type: enquiryType,
-          message: message || 'No extra questions provided.'
+          service: enquiryType,
+          category: enquiryType,
+          message: message || 'No extra questions provided.',
+          notes: message || 'No extra questions provided.'
         };
 
         sendEnquiry(templateParams, submitBtn, bppForm, `Thank you ${name}! Our BPP team will contact you regarding your partnership enquiry shortly.`);
